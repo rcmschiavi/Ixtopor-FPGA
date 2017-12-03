@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>31/10/2017 09:22:09</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1509448929085</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>24/10/2017 09:53:46</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1508846026088</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\intelFPGA_lite\_Projeto_Nios\SistBasi2_ixtopor\software\bsp</BspGeneratedLocation>
         <BspSettingsFile>.\settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\sopc_2.sopcinfo</SopcDesignFile>

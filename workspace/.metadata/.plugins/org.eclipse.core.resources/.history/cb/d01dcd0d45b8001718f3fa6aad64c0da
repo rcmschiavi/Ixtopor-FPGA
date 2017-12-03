@@ -1,0 +1,79 @@
+/*************************************************************************************
+ *
+ * teste_2_sysclock
+ *
+ *  Este programa testa o timer "Sysclock".  Ele incrementa e exibe uma contagem
+ *  na tela a cada 20 segundos, usando para isto a função de "callback" do alarme
+ *  do temporizador....
+ *
+ *  Por: Prof. Édson Mélo, em  22/10/2017.
+ *
+ *
+ */
+
+
+/**********************************************************************************
+ *  Arquivos de cabeçalho necessários...
+ */
+#include "sys/alt_stdio.h"
+#include "stdlib.h"
+#include "sys/time.h"
+#include "sys/alt_alarm.h"
+
+//#define 	true 1
+//#define 	false 0
+
+unsigned long int ticks_por_segundo;
+unsigned long int contagem = 0UL;
+
+
+alt_u32 intervalo_alarm_callback (void* context);
+void imprimeUnsignedDec (unsigned long numero);
+
+
+int main (void) {
+
+	static alt_alarm alarm;
+
+	// Valor de base da temporização do timestamp-timer:
+	ticks_por_segundo = alt_ticks_per_second ();
+
+	// Configura o temporizador para uma chamada a cada 20 segundos...
+	alt_alarm_start ( &alarm, 20UL * ticks_por_segundo,
+			          intervalo_alarm_callback,		// Função a ser chamada...
+			          NULL							// Sem informação de contexto...
+			         );
+
+
+	alt_putstr ("\n\tPartida do programa... Contagem em :");
+	imprimeUnsignedDec (contagem);
+
+    while(1)
+    	;   //  Nada a fazer, enquanto espera as chamadas
+    		//  à função de callback...
+
+}
+
+alt_u32 intervalo_alarm_callback (void* context)
+{
+	// Completaram-se 20 segundos... Incrementa e exibe a contagem..
+	alt_putstr ("\n\tPartida do programa... Contagem em :");
+	imprimeUnsignedDec (++contagem);
+
+	return ticks_por_segundo;
+}
+
+
+void imprimeUnsignedDec (unsigned long numero)  {
+
+	if ( numero > 9 )  {
+		imprimeUnsignedDec (numero/10);
+	    alt_printf ("%x", (int) numero%10);
+	}
+	else
+		alt_printf ( "%x", (int) numero);
+
+	return;
+
+}
+

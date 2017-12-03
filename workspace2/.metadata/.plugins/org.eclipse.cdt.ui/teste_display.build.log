@@ -1,0 +1,9 @@
+09:49:53 **** Incremental Build of configuration Nios II for project teste_display ****
+make all 
+Info: Building ../teste_display_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../teste_display_bsp/
+[BSP build complete]
+[teste_display build complete]
+
+09:49:54 Build Finished (took 966ms)
+

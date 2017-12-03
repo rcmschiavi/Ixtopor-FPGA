@@ -774,7 +774,7 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY com.altera.sbtgui.launch 1 0 2017-10-24 08:40:56.618
 !MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x211d0 --id=0xf2 --timestamp=1508756809 /cygdrive/c/intelFPGA_lite/_Projetos_NIOSII/SistBasi2_ixtopor/software/teste_timestamp/teste_timestamp.elf]
-!SESSION 2017-10-31 08:11:29.051 -----------------------------------------------
+!SESSION 2017-10-24 09:16:16.438 -----------------------------------------------
 eclipse.buildId=4.3.2.M20140221-1700
 java.version=1.8.0_05
 java.vendor=Oracle Corporation
@@ -782,12 +782,12 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
 Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
 
-!ENTRY org.eclipse.core.resources 2 10035 2017-10-31 08:11:53.741
+!ENTRY org.eclipse.core.resources 2 10035 2017-10-24 09:16:37.211
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
 
-!ENTRY org.eclipse.core.resources 4 567 2017-10-31 08:11:53.856
+!ENTRY org.eclipse.core.resources 4 567 2017-10-24 09:16:37.311
 !MESSAGE Workspace restored, but some problems occurred.
-!SUBENTRY 1 org.eclipse.core.resources 4 567 2017-10-31 08:11:53.856
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2017-10-24 09:16:37.311
 !MESSAGE Could not read metadata for '_bspGeral'.
 !STACK 1
 org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for '_bspGeral' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
@@ -831,9 +831,9 @@ org.eclipse.core.internal.resources.ResourceException: The project description f
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
-!SUBENTRY 2 org.eclipse.core.resources 4 567 2017-10-31 08:11:53.856
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2017-10-24 09:16:37.311
 !MESSAGE The project description file (.project) for '_bspGeral' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-!SUBENTRY 1 org.eclipse.core.resources 4 567 2017-10-31 08:11:53.856
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2017-10-24 09:16:37.311
 !MESSAGE Could not read metadata for 'teste_timestamp'.
 !STACK 1
 org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'teste_timestamp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
@@ -877,251 +877,18 @@ org.eclipse.core.internal.resources.ResourceException: The project description f
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
-!SUBENTRY 2 org.eclipse.core.resources 4 567 2017-10-31 08:11:53.856
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2017-10-24 09:16:37.311
 !MESSAGE The project description file (.project) for 'teste_timestamp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
 
-!ENTRY org.eclipse.cdt.core 1 0 2017-10-31 08:13:44.610
-!MESSAGE Indexed 'bsp_2' (89 sources, 69 headers) in 2,44 sec: 1.352 declarations; 3.368 references; 120 unresolved inclusions; 6 syntax errors; 202 unresolved names (4,10%)
+!ENTRY org.eclipse.core.resources 4 567 2017-10-24 09:16:50.149
+!MESSAGE The project description file (.project) for 'aciona_disp7seg' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
 
-!ENTRY org.eclipse.cdt.core 1 0 2017-10-31 08:15:09.631
-!MESSAGE Indexed 'teste1' (0 sources, 0 headers) in 0,00 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00%)
+!ENTRY org.eclipse.core.resources 4 567 2017-10-24 09:16:56.471
+!MESSAGE The project description file (.project) for 'aciona_disp7seg' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
 
-!ENTRY org.eclipse.core.resources 4 567 2017-10-31 08:15:21.922
-!MESSAGE The project description file (.project) for 'Oi_Mundo' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-
-!ENTRY org.eclipse.core.resources 4 567 2017-10-31 08:15:25.181
-!MESSAGE The project description file (.project) for '_bspGeral' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-
-!ENTRY org.eclipse.core.resources 4 567 2017-10-31 08:15:26.926
-!MESSAGE The project description file (.project) for '_bspGeral' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-
-!ENTRY org.eclipse.cdt.core 1 0 2017-10-31 08:18:34.107
-!MESSAGE Indexed 'teste_1' (1 sources, 0 headers) in 0,02 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00%)
-
-!ENTRY org.eclipse.jface 2 0 2017-10-31 08:18:45.819
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 08:18:45.819
-!MESSAGE A conflict occurred for ALT+CTRL+I:
-Binding(ALT+CTRL+I,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
-		Open an include browser on the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78b906d,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(ALT+CTRL+I,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
-		Open an include browser on the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78b906d,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 08:18:45.819
-!MESSAGE A conflict occurred for F3:
-Binding(F3,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
-		Open an editor on the selected element's declaration(s),
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@330a6b76,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(F3,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
-		Open an editor on the selected element's declaration(s),
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@330a6b76,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 08:18:45.819
-!MESSAGE A conflict occurred for F4:
-Binding(F4,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
-		Open a type hierarchy on the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34018757,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(F4,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
-		Open a type hierarchy on the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34018757,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 08:18:45.819
-!MESSAGE A conflict occurred for CTRL+SHIFT+G:
-Binding(CTRL+SHIFT+G,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
-		Search for references to the selected element in the workspace,
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f21c18f,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(CTRL+SHIFT+G,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
-		Search for references to the selected element in the workspace,
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f21c18f,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 08:18:45.819
-!MESSAGE A conflict occurred for CTRL+G:
-Binding(CTRL+G,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
-		Search for declarations of the selected element in the workspace,
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34723cfe,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(CTRL+G,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
-		Search for declarations of the selected element in the workspace,
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34723cfe,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 08:18:45.819
-!MESSAGE A conflict occurred for ALT+CTRL+H:
-Binding(ALT+CTRL+H,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
-		Open the call hierarchy for the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@54c3b0dd,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(ALT+CTRL+H,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
-		Open the call hierarchy for the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@54c3b0dd,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 08:18:45.819
-!MESSAGE A conflict occurred for CTRL+SHIFT+H:
-Binding(CTRL+SHIFT+H,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
-		Open a type in the type hierarchy view,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6c40ae2d,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(CTRL+SHIFT+H,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
-		Open a type in the type hierarchy view,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6c40ae2d,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 08:18:45.819
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
-		Open an element in an Editor,
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d0c3793,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
-		Open an element in an Editor,
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d0c3793,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 08:18:45.819
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@283c6f00,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@283c6f00,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-
-!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-10-31 08:20:11.108
-!MESSAGE Error setting focus to : org.eclipse.e4.ui.model.application.ui.basic.impl.PartImpl main.c
-!STACK 0
-org.eclipse.swt.SWTException: Widget is disposed
-	at org.eclipse.swt.SWT.error(SWT.java:4397)
-	at org.eclipse.swt.SWT.error(SWT.java:4312)
-	at org.eclipse.swt.SWT.error(SWT.java:4283)
-	at org.eclipse.swt.widgets.Widget.error(Widget.java:472)
-	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:344)
-	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3321)
-	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1040)
-	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1040)
-	at org.eclipse.ui.texteditor.StatusTextEditor.setFocus(StatusTextEditor.java:120)
-	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:192)
-	at sun.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:243)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:249)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:220)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:107)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:763)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.setFocus(ContributedPartRenderer.java:102)
-	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:329)
-	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2528)
-	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:1053)
-	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3819)
-	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3068)
-	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3076)
-	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1772)
-	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:279)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4170)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
-!SESSION 2017-10-31 09:10:38.972 -----------------------------------------------
+!ENTRY org.eclipse.core.resources 4 567 2017-10-24 09:17:03.668
+!MESSAGE The project description file (.project) for 'teste_timestamp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!SESSION 2017-10-24 09:51:48.809 -----------------------------------------------
 eclipse.buildId=4.3.2.M20140221-1700
 java.version=1.8.0_05
 java.vendor=Oracle Corporation
@@ -1129,204 +896,5 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
 Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
 
-!ENTRY org.eclipse.cdt.debug.core 4 103 2017-10-31 09:13:06.324
-!MESSAGE Project teste_timestamp is closed
-
-!ENTRY org.eclipse.cdt.debug.core 4 103 2017-10-31 09:14:05.612
-!MESSAGE Project teste_timestamp is closed
-
-!ENTRY org.eclipse.cdt.debug.core 4 103 2017-10-31 09:15:19.399
-!MESSAGE Project teste_timestamp is closed
-!SESSION 2017-10-31 09:15:47.263 -----------------------------------------------
-eclipse.buildId=4.3.2.M20140221-1700
-java.version=1.8.0_05
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
-
-!ENTRY org.eclipse.jface 2 0 2017-10-31 09:17:11.692
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 09:17:11.692
-!MESSAGE A conflict occurred for F4:
-Binding(F4,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
-		Open a type hierarchy on the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f7949dc,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(F4,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
-		Open a type hierarchy on the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f7949dc,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 09:17:11.692
-!MESSAGE A conflict occurred for F3:
-Binding(F3,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
-		Open an editor on the selected element's declaration(s),
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6bd8c398,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(F3,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
-		Open an editor on the selected element's declaration(s),
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6bd8c398,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 09:17:11.692
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
-		Open an element in an Editor,
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3497ecea,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
-		Open an element in an Editor,
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3497ecea,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 09:17:11.692
-!MESSAGE A conflict occurred for ALT+CTRL+I:
-Binding(ALT+CTRL+I,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
-		Open an include browser on the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e487d57,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(ALT+CTRL+I,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
-		Open an include browser on the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e487d57,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 09:17:11.692
-!MESSAGE A conflict occurred for CTRL+SHIFT+G:
-Binding(CTRL+SHIFT+G,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
-		Search for references to the selected element in the workspace,
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4b2af0eb,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(CTRL+SHIFT+G,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
-		Search for references to the selected element in the workspace,
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4b2af0eb,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 09:17:11.692
-!MESSAGE A conflict occurred for CTRL+G:
-Binding(CTRL+G,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
-		Search for declarations of the selected element in the workspace,
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@66c32e15,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(CTRL+G,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
-		Search for declarations of the selected element in the workspace,
-		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@66c32e15,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 09:17:11.692
-!MESSAGE A conflict occurred for ALT+CTRL+H:
-Binding(ALT+CTRL+H,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
-		Open the call hierarchy for the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6d387e9b,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(ALT+CTRL+H,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
-		Open the call hierarchy for the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6d387e9b,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 09:17:11.692
-!MESSAGE A conflict occurred for CTRL+SHIFT+H:
-Binding(CTRL+SHIFT+H,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
-		Open a type in the type hierarchy view,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@304704ae,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(CTRL+SHIFT+H,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
-		Open a type in the type hierarchy view,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@304704ae,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2017-10-31 09:17:11.692
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c7607e5,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c7607e5,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-
-!ENTRY org.eclipse.cdt.debug.core 4 103 2017-10-31 09:17:35.015
-!MESSAGE Project teste_timestamp is closed
-
-!ENTRY org.eclipse.cdt.debug.core 4 103 2017-10-31 09:18:06.487
-!MESSAGE Project teste_timestamp is closed
-
-!ENTRY org.eclipse.cdt.debug.core 4 103 2017-10-31 09:18:35.358
-!MESSAGE Project teste_timestamp is closed
-
-!ENTRY org.eclipse.cdt.debug.core 4 103 2017-10-31 09:18:37.579
-!MESSAGE Project teste_timestamp is closed
-
-!ENTRY org.eclipse.cdt.debug.core 4 103 2017-10-31 09:19:11.285
-!MESSAGE Project teste_timestamp is closed
-
-!ENTRY org.eclipse.cdt.debug.core 4 103 2017-10-31 09:19:27.713
-!MESSAGE Project teste_timestamp is closed
-
-!ENTRY org.eclipse.cdt.debug.core 4 103 2017-10-31 09:19:42.174
-!MESSAGE Project teste_timestamp is closed
+!ENTRY org.eclipse.core.resources 4 567 2017-10-24 09:52:02.680
+!MESSAGE The project description file (.project) for '_bspGeral' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.

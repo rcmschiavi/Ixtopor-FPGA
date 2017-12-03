@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=C\:\\intelFPGA_lite\\Sistema_Basico2\\software\\teste_display
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\intelFPGA_lite\\Sistema_Basico2\\sopc_2.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\intelFPGA_lite\\Sistema_Basico2\\software\\teste_display_bsp

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for sistema_basico2
-Tue Nov 14 11:22:20 2017
+Tue Oct 24 11:05:08 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Nov 14 11:22:20 2017 ;
+; EDA Netlist Writer Status ; Successful - Tue Oct 24 11:05:08 2017 ;
 ; Revision Name             ; sistema_basico2                       ;
 ; Top-level Entity Name     ; sistema_basico2                       ;
 ; Family                    ; MAX 10                                ;
@@ -67,13 +67,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                ;
-+-------------------------------------------------------------------------------------------+
-; Generated Files                                                                           ;
-+-------------------------------------------------------------------------------------------+
-; C:/intelFPGA_lite/_Projeto_Nios/SistBasi2_ixtopor/simulation/modelsim/sistema_basico2.vho ;
-+-------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Simulation Generated Files                                                  ;
++-----------------------------------------------------------------------------+
+; Generated Files                                                             ;
++-----------------------------------------------------------------------------+
+; C:/intelFPGA_lite/SistBasi2_ixtopor/simulation/modelsim/sistema_basico2.vho ;
++-----------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -82,14 +82,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Nov 14 11:22:17 2017
+    Info: Processing started: Tue Oct 24 11:05:04 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off sistema_basico2 -c sistema_basico2
 Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
-Info (204019): Generated file sistema_basico2.vho in folder "C:/intelFPGA_lite/_Projeto_Nios/SistBasi2_ixtopor/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file sistema_basico2.vho in folder "C:/intelFPGA_lite/SistBasi2_ixtopor/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 608 megabytes
-    Info: Processing ended: Tue Nov 14 11:22:20 2017
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 606 megabytes
+    Info: Processing ended: Tue Oct 24 11:05:08 2017
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

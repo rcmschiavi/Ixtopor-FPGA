@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preferences>
  <debug showDebugMenu="0" />
- <systemtable filter="All Interfaces">
+ <systemtable>
   <columns>
    <connections preferredWidth="159" />
    <irq preferredWidth="34" />
@@ -14,11 +14,7 @@
    <frequency preferredWidth="529" />
   </columns>
  </clocktable>
- <library
-   expandedCategories="Library/Processors and Peripherals/Embedded Processors,Library,Project,Library/Processors and Peripherals" />
- <window width="1360" height="727" x="0" y="1" />
- <generation
-   synthesis="VHDL"
-   block_symbol_file="1"
-   path="C:/intelFPGA_lite/_Projeto_Nios/SistBasi2_ixtopor" />
+ <library expandedCategories="Library,Project" />
+ <window width="1938" height="1098" x="-9" y="-9" />
+ <generation synthesis="VHDL" block_symbol_file="1" />
 </preferences>

@@ -1,5 +1,5 @@
 Flow report for sistema_basico2
-Sat Dec 02 23:02:11 2017
+Tue Oct 24 11:05:08 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,24 +41,24 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Dec 02 23:02:10 2017       ;
+; Flow Status                        ; Successful - Tue Oct 24 11:05:08 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; sistema_basico2                             ;
 ; Top-level Entity Name              ; sistema_basico2                             ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 3,741                                       ;
-;     Total combinational functions  ; 3,102                                       ;
-;     Dedicated logic registers      ; 2,102                                       ;
-; Total registers                    ; 2102                                        ;
-; Total pins                         ; 27                                          ;
+; Total logic elements               ; 3,208 / 49,760 ( 6 % )                      ;
+;     Total combinational functions  ; 2,904 / 49,760 ( 6 % )                      ;
+;     Dedicated logic registers      ; 1,962 / 49,760 ( 4 % )                      ;
+; Total registers                    ; 1962                                        ;
+; Total pins                         ; 85 / 360 ( 24 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 331,264                                     ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total memory bits                  ; 331,264 / 1,677,312 ( 20 % )                ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -67,7 +67,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/02/2017 23:01:07 ;
+; Start date & time ; 10/24/2017 11:03:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; sistema_basico2     ;
 +-------------------+---------------------+
@@ -78,10 +78,9 @@ agreement for further details.
 +-------------------------------------+----------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                    ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1097975843555.151226286708620                            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 40637553952052.150885020206344                           ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                   ; <None>        ; --          ; --             ;
-; IP_SEARCH_PATHS                     ; c:\intelfpga_lite\_projeto_nios\sistbasi2_ixtopor\sopc_2 ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                       ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                        ; --            ; --          ; --             ;
 ; MISC_FILE                           ; sopc_2/synthesis/../sopc_2.cmp                           ; --            ; --          ; --             ;
@@ -99,35 +98,47 @@ agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                             ; --            ; --          ; --             ;
 ; SLD_FILE                            ; sopc_2/synthesis/sopc_2.regmap                           ; --            ; --          ; --             ;
 ; SLD_FILE                            ; sopc_2/synthesis/sopc_2.debuginfo                        ; --            ; --          ; --             ;
-; SLD_INFO                            ; QSYS_NAME sopc_2 HAS_SOPCINFO 1 GENERATION_ID 1510059784 ; --            ; sopc_2      ; --             ;
+; SLD_INFO                            ; QSYS_NAME sopc_2 HAS_SOPCINFO 1 GENERATION_ID 1508756809 ; --            ; sopc_2      ; --             ;
 ; SOPCINFO_FILE                       ; sopc_2/synthesis/../../sopc_2.sopcinfo                   ; --            ; --          ; --             ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                       ; --            ; --          ; --             ;
 +-------------------------------------+----------------------------------------------------------+---------------+-------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:00     ; 1.0                     ; 924 MB              ; 00:01:32                           ;
-; Total                ; 00:01:00     ; --                      ; --                  ; 00:01:32                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:50     ; 1.0                     ; 867 MB              ; 00:01:21                           ;
+; Fitter                    ; 00:00:29     ; 1.2                     ; 1320 MB             ; 00:00:40                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 595 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.4                     ; 735 MB              ; 00:00:11                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 606 MB              ; 00:00:04                           ;
+; Total                     ; 00:01:35     ; --                      ; --                  ; 00:02:21                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-KVPCVGA  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-KVPCVGA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DESKTOP-KVPCVGA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DESKTOP-KVPCVGA  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-KVPCVGA  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-KVPCVGA  ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off sistema_basico2 -c sistema_basico2
+quartus_fit --read_settings_files=off --write_settings_files=off sistema_basico2 -c sistema_basico2
+quartus_asm --read_settings_files=off --write_settings_files=off sistema_basico2 -c sistema_basico2
+quartus_sta sistema_basico2 -c sistema_basico2
+quartus_eda --read_settings_files=off --write_settings_files=off sistema_basico2 -c sistema_basico2
 
 
 
