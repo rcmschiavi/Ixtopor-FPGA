@@ -4,6 +4,9 @@
 -- If you work with another frequency, change the constante prescaler according the equation above
 --	clk/(255*frequency)
 
+-- Código de geração de PWM aplicado ao controle de temperatura de um fio de cromo níquel aquecido por
+-- corrente elétrica eficaz proporcional proporcional a tensão eficaz aplicada ao fio.
+
 -- Autor: Rodolfo Cavour Moretti Schiavi
 
 library IEEE;
