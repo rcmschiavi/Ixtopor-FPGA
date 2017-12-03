@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 23, 2017 7:02:56 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1508792576495</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\intelFPGA_lite\_Projetos_NIOSII\SistBasi2_ixtopor\software\_bspGeral</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>03/12/2017 12:57:39</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1512313059228</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\intelFPGA_lite\_Projeto_Nios\SistBasi2_ixtopor\software\_bspGeral</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\sopc_2.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
@@ -923,92 +923,98 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>sw</slaveDescriptor>
-                <addressRange>0x00000000 - 0x0000000F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>memoria</slaveDescriptor>
                 <addressRange>0x00010000 - 0x00019C3F</addressRange>
                 <addressSpan>40000</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>spi</slaveDescriptor>
+                <slaveDescriptor>adc_1</slaveDescriptor>
                 <addressRange>0x00021000 - 0x0002101F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>watchdog_timer</slaveDescriptor>
+                <slaveDescriptor>spi</slaveDescriptor>
                 <addressRange>0x00021020 - 0x0002103F</addressRange>
                 <addressSpan>32</addressSpan>
-                <attributes>timer</attributes>
+                <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>timer_geral</slaveDescriptor>
+                <slaveDescriptor>watchdog_timer</slaveDescriptor>
                 <addressRange>0x00021040 - 0x0002105F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>timestamp_timer</slaveDescriptor>
+                <slaveDescriptor>timer_geral</slaveDescriptor>
                 <addressRange>0x00021060 - 0x0002107F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sys_clk_timer</slaveDescriptor>
+                <slaveDescriptor>timestamp_timer</slaveDescriptor>
                 <addressRange>0x00021080 - 0x0002109F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>uart</slaveDescriptor>
+                <slaveDescriptor>sys_clk_timer</slaveDescriptor>
                 <addressRange>0x000210A0 - 0x000210BF</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>uart</slaveDescriptor>
+                <addressRange>0x000210C0 - 0x000210DF</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>PORTA_B</slaveDescriptor>
-                <addressRange>0x000210C0 - 0x000210DF</addressRange>
-                <addressSpan>32</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>PORTA_A</slaveDescriptor>
                 <addressRange>0x000210E0 - 0x000210FF</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>hex_1</slaveDescriptor>
+                <slaveDescriptor>PORTA_A</slaveDescriptor>
+                <addressRange>0x00021100 - 0x0002111F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>sw</slaveDescriptor>
                 <addressRange>0x00021120 - 0x0002112F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>hex_2</slaveDescriptor>
+                <slaveDescriptor>hex_1</slaveDescriptor>
                 <addressRange>0x00021130 - 0x0002113F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>hex_3</slaveDescriptor>
+                <slaveDescriptor>hex_2</slaveDescriptor>
                 <addressRange>0x00021140 - 0x0002114F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>hex_4</slaveDescriptor>
+                <slaveDescriptor>hex_3</slaveDescriptor>
                 <addressRange>0x00021150 - 0x0002115F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>hex_5</slaveDescriptor>
+                <slaveDescriptor>hex_4</slaveDescriptor>
                 <addressRange>0x00021160 - 0x0002116F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>hex_5</slaveDescriptor>
+                <addressRange>0x00021170 - 0x0002117F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>

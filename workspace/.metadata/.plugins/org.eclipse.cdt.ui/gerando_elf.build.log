@@ -1,0 +1,9 @@
+12:49:23 **** Incremental Build of configuration Nios II for project gerando_elf ****
+make all 
+Info: Building ../Oi_Mundo_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Oi_Mundo_bsp/
+[BSP build complete]
+[gerando_elf build complete]
+
+12:49:24 Build Finished (took 1s.33ms)
+

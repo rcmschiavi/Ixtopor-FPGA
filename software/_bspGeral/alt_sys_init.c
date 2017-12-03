@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'sopc_2'
  * SOPC Builder design path: ../../sopc_2.sopcinfo
  *
- * Generated: Mon Oct 23 09:23:48 BRST 2017
+ * Generated: Sun Dec 03 12:52:02 BRST 2017
  */
 
 /*
@@ -64,6 +64,7 @@
 #include "altera_avalon_sysid_qsys.h"
 #include "altera_avalon_timer.h"
 #include "altera_avalon_uart.h"
+#include "altera_up_avalon_adc.h"
 
 /*
  * Allocate the device storage
@@ -78,6 +79,7 @@ ALTERA_AVALON_TIMER_INSTANCE ( TIMER_GERAL, timer_geral);
 ALTERA_AVALON_TIMER_INSTANCE ( TIMESTAMP_TIMER, timestamp_timer);
 ALTERA_AVALON_TIMER_INSTANCE ( WATCHDOG_TIMER, watchdog_timer);
 ALTERA_AVALON_UART_INSTANCE ( UART, uart);
+ALTERA_UP_AVALON_ADC_INSTANCE ( ADC_1, adc_1);
 
 /*
  * Initialize the interrupt controller devices
@@ -108,4 +110,5 @@ void alt_sys_init( void )
     ALTERA_AVALON_SPI_INIT ( SPI, spi);
     ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, sysid);
     ALTERA_AVALON_UART_INIT ( UART, uart);
+    ALTERA_UP_AVALON_ADC_INIT ( ADC_1, adc_1);
 }

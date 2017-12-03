@@ -1,0 +1,6 @@
+13:48:52 **** Clean-only build of configuration Nios II for project testando_adc2_bsp ****
+make clean 
+[BSP clean complete]
+
+13:48:53 Build Finished (took 638ms)
+

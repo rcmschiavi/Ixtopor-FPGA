@@ -14,7 +14,8 @@
    <frequency preferredWidth="529" />
   </columns>
  </clocktable>
- <library expandedCategories="Library,Project" />
- <window width="1938" height="1098" x="-9" y="-9" />
+ <library
+   expandedCategories="Library/System,Library/Processors and Peripherals/Peripherals,Library/Processors and Peripherals,Project,Library,Library/University Program/Generic IO,Library/University Program" />
+ <window width="1366" height="728" x="0" y="0" />
  <generation synthesis="VHDL" block_symbol_file="1" />
 </preferences>

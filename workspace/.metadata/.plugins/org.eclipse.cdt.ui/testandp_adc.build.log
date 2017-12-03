@@ -1,0 +1,20 @@
+16:05:44 **** Incremental Build of configuration Nios II for project testandp_adc ****
+make all 
+Info: Building ../_bspGeral/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../_bspGeral/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../_bspGeral//HAL/inc -I../_bspGeral/ -I../_bspGeral//drivers/inc  -pipe -D__hal__ -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking testandp_adc.elf
+nios2-elf-g++  -T'../_bspGeral//linker.x' -msys-crt0='../_bspGeral//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../_bspGeral/  -msmallc  -Wl,-Map=testandp_adc.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o testandp_adc.elf obj/default/hello_world.o -lm -msys-lib=m
+../_bspGeral/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\intelFPGA_lite\_Projeto_Nios\SistBasi2_ixtopor\software\_bspGeral/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert testandp_adc.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x211d0 --timestamp 1512311939 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/intelFPGA_lite/_Projeto_Nios/SistBasi2_ixtopor" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/intelFPGA_lite/_Projeto_Nios/SistBasi2_ixtopor/software/_bspGeral/../../sopc_2.sopcinfo
+Info: (testandp_adc.elf) 9508 Bytes program size (code + initialized data).
+Info:                    29 KBytes free for stack + heap.
+Info: Creating testandp_adc.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source testandp_adc.elf >testandp_adc.objdump
+[testandp_adc build complete]
+
+16:05:46 Build Finished (took 1s.843ms)
+

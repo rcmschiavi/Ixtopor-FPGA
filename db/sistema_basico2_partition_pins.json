@@ -288,6 +288,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
 					"name" : "sw[7]",
 					"strict" : false
 				},
@@ -325,10 +329,6 @@
 				},
 				{
 					"name" : "sw[9]",
-					"strict" : false
-				},
-				{
-					"name" : "rst_n",
 					"strict" : false
 				},
 				{

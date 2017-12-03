@@ -1,0 +1,18 @@
+14:13:45 **** Build of configuration Nios II for project testando_adc2 ****
+make mem_init_generate 
+Info: Building ../testando_adc2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../testando_adc2_bsp/
+[BSP build complete]
+Info: Linking testando_adc2.elf
+nios2-elf-g++  -T'../testando_adc2_bsp//linker.x' -msys-crt0='../testando_adc2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../testando_adc2_bsp/   -Wl,-Map=testando_adc2.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o testando_adc2.elf obj/default/hello_world.o -lm -msys-lib=m
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: testando_adc2.elf section `.text' will not fit in region `memoria'
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: address 0x221a0 of testando_adc2.elf section `.rwdata' is not within region `memoria'
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: address 0x23edc of testando_adc2.elf section `.bss' is not within region `memoria'
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: address 0x221a0 of testando_adc2.elf section `.rwdata' is not within region `memoria'
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: address 0x23edc of testando_adc2.elf section `.bss' is not within region `memoria'
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: region `memoria' overflowed by 41628 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [testando_adc2.elf] Error 1
+
+14:13:46 Build Finished (took 1s.37ms)
+

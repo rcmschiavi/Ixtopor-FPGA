@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'sopc_2'
  * SOPC Builder design path: ../../sopc_2.sopcinfo
  *
- * Generated: Mon Oct 23 09:20:46 BRST 2017
+ * Generated: Sun Dec 03 12:46:55 BRST 2017
  */
 
 /*
@@ -141,6 +141,7 @@
 #define __ALTERA_AVALON_TIMER
 #define __ALTERA_AVALON_UART
 #define __ALTERA_NIOS2_GEN2
+#define __ALTERA_UP_AVALON_ADC
 
 
 /*
@@ -149,7 +150,7 @@
  */
 
 #define ALT_MODULE_CLASS_PORTA_A altera_avalon_pio
-#define PORTA_A_BASE 0x210e0
+#define PORTA_A_BASE 0x21100
 #define PORTA_A_BIT_CLEARING_EDGE_REGISTER 0
 #define PORTA_A_BIT_MODIFYING_OUTPUT_REGISTER 1
 #define PORTA_A_CAPTURE 1
@@ -176,7 +177,7 @@
  */
 
 #define ALT_MODULE_CLASS_PORTA_B altera_avalon_pio
-#define PORTA_B_BASE 0x210c0
+#define PORTA_B_BASE 0x210e0
 #define PORTA_B_BIT_CLEARING_EDGE_REGISTER 0
 #define PORTA_B_BIT_MODIFYING_OUTPUT_REGISTER 1
 #define PORTA_B_CAPTURE 1
@@ -231,6 +232,20 @@
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
 #define ALT_SYSTEM_NAME "sopc_2"
+
+
+/*
+ * adc_1 configuration
+ *
+ */
+
+#define ADC_1_BASE 0x21000
+#define ADC_1_IRQ -1
+#define ADC_1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define ADC_1_NAME "/dev/adc_1"
+#define ADC_1_SPAN 32
+#define ADC_1_TYPE "altera_up_avalon_adc"
+#define ALT_MODULE_CLASS_adc_1 altera_up_avalon_adc
 
 
 /*
@@ -331,7 +346,7 @@
  */
 
 #define ALT_MODULE_CLASS_hex_1 altera_avalon_pio
-#define HEX_1_BASE 0x21120
+#define HEX_1_BASE 0x21130
 #define HEX_1_BIT_CLEARING_EDGE_REGISTER 0
 #define HEX_1_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define HEX_1_CAPTURE 0
@@ -358,7 +373,7 @@
  */
 
 #define ALT_MODULE_CLASS_hex_2 altera_avalon_pio
-#define HEX_2_BASE 0x21130
+#define HEX_2_BASE 0x21140
 #define HEX_2_BIT_CLEARING_EDGE_REGISTER 0
 #define HEX_2_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define HEX_2_CAPTURE 0
@@ -385,7 +400,7 @@
  */
 
 #define ALT_MODULE_CLASS_hex_3 altera_avalon_pio
-#define HEX_3_BASE 0x21140
+#define HEX_3_BASE 0x21150
 #define HEX_3_BIT_CLEARING_EDGE_REGISTER 0
 #define HEX_3_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define HEX_3_CAPTURE 0
@@ -412,7 +427,7 @@
  */
 
 #define ALT_MODULE_CLASS_hex_4 altera_avalon_pio
-#define HEX_4_BASE 0x21150
+#define HEX_4_BASE 0x21160
 #define HEX_4_BIT_CLEARING_EDGE_REGISTER 0
 #define HEX_4_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define HEX_4_CAPTURE 0
@@ -439,7 +454,7 @@
  */
 
 #define ALT_MODULE_CLASS_hex_5 altera_avalon_pio
-#define HEX_5_BASE 0x21160
+#define HEX_5_BASE 0x21170
 #define HEX_5_BIT_CLEARING_EDGE_REGISTER 0
 #define HEX_5_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define HEX_5_CAPTURE 0
@@ -540,7 +555,7 @@
  */
 
 #define ALT_MODULE_CLASS_spi altera_avalon_spi
-#define SPI_BASE 0x21000
+#define SPI_BASE 0x21020
 #define SPI_CLOCKMULT 1
 #define SPI_CLOCKPHASE 0
 #define SPI_CLOCKPOLARITY 0
@@ -571,7 +586,7 @@
  */
 
 #define ALT_MODULE_CLASS_sw altera_avalon_pio
-#define SW_BASE 0x0
+#define SW_BASE 0x21120
 #define SW_BIT_CLEARING_EDGE_REGISTER 0
 #define SW_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SW_CAPTURE 0
@@ -599,7 +614,7 @@
 
 #define ALT_MODULE_CLASS_sys_clk_timer altera_avalon_timer
 #define SYS_CLK_TIMER_ALWAYS_RUN 1
-#define SYS_CLK_TIMER_BASE 0x21080
+#define SYS_CLK_TIMER_BASE 0x210a0
 #define SYS_CLK_TIMER_COUNTER_SIZE 32
 #define SYS_CLK_TIMER_FIXED_PERIOD 0
 #define SYS_CLK_TIMER_FREQ 50000000
@@ -630,7 +645,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1508756809
+#define SYSID_TIMESTAMP 1512311939
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -641,7 +656,7 @@
 
 #define ALT_MODULE_CLASS_timer_geral altera_avalon_timer
 #define TIMER_GERAL_ALWAYS_RUN 0
-#define TIMER_GERAL_BASE 0x21040
+#define TIMER_GERAL_BASE 0x21060
 #define TIMER_GERAL_COUNTER_SIZE 32
 #define TIMER_GERAL_FIXED_PERIOD 0
 #define TIMER_GERAL_FREQ 50000000
@@ -667,7 +682,7 @@
 
 #define ALT_MODULE_CLASS_timestamp_timer altera_avalon_timer
 #define TIMESTAMP_TIMER_ALWAYS_RUN 0
-#define TIMESTAMP_TIMER_BASE 0x21060
+#define TIMESTAMP_TIMER_BASE 0x21080
 #define TIMESTAMP_TIMER_COUNTER_SIZE 32
 #define TIMESTAMP_TIMER_FIXED_PERIOD 0
 #define TIMESTAMP_TIMER_FREQ 50000000
@@ -692,7 +707,7 @@
  */
 
 #define ALT_MODULE_CLASS_uart altera_avalon_uart
-#define UART_BASE 0x210a0
+#define UART_BASE 0x210c0
 #define UART_BAUD 9600
 #define UART_DATA_BITS 8
 #define UART_FIXED_BAUD 1
@@ -718,7 +733,7 @@
 
 #define ALT_MODULE_CLASS_watchdog_timer altera_avalon_timer
 #define WATCHDOG_TIMER_ALWAYS_RUN 1
-#define WATCHDOG_TIMER_BASE 0x21020
+#define WATCHDOG_TIMER_BASE 0x21040
 #define WATCHDOG_TIMER_COUNTER_SIZE 32
 #define WATCHDOG_TIMER_FIXED_PERIOD 1
 #define WATCHDOG_TIMER_FREQ 50000000

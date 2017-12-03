@@ -82,26 +82,26 @@ RESERVED_INPUT               : A9        :        :                   :         
 RESERVED_INPUT               : A10       :        :                   :         : 7         :                
 RESERVED_INPUT               : A11       :        :                   :         : 7         :                
 sw[4]                        : A12       : input  : 2.5 V             :         : 7         : Y              
-RESERVED_INPUT               : A13       :        :                   :         : 7         :                
-RESERVED_INPUT               : A14       :        :                   :         : 7         :                
+sw[6]                        : A13       : input  : 2.5 V             :         : 7         : Y              
+sw[7]                        : A14       : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : A15       :        :                   :         : 7         :                
 hex1[7]                      : A16       : output : 2.5 V             :         : 7         : Y              
-RESERVED_INPUT               : A17       :        :                   :         : 7         :                
-RESERVED_INPUT               : A18       :        :                   :         : 7         :                
+hex1[2]                      : A17       : output : 2.5 V             :         : 7         : Y              
+hex1[1]                      : A18       : output : 2.5 V             :         : 7         : Y              
 hex2[7]                      : A19       : output : 2.5 V             :         : 7         : Y              
 hex2[5]                      : A20       : output : 2.5 V             :         : 7         : Y              
 hex2[3]                      : A21       : output : 2.5 V             :         : 6         : Y              
 GND                          : A22       : gnd    :                   :         :           :                
 RESERVED_INPUT               : AA1       :        :                   :         : 3         :                
-hex1[1]                      : AA2       : output : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT               : AA2       :        :                   :         : 3         :                
 RESERVED_INPUT               : AA3       :        :                   :         : 3         :                
 GND                          : AA4       : gnd    :                   :         :           :                
-hex1[4]                      : AA5       : output : 2.5 V             :         : 3         : Y              
-hex1[3]                      : AA6       : output : 2.5 V             :         : 3         : Y              
-hex1[2]                      : AA7       : output : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT               : AA5       :        :                   :         : 3         :                
+RESERVED_INPUT               : AA6       :        :                   :         : 3         :                
+RESERVED_INPUT               : AA7       :        :                   :         : 3         :                
 porta_b[0]                   : AA8       : bidir  : 2.5 V             :         : 3         : Y              
 porta_b[1]                   : AA9       : bidir  : 2.5 V             :         : 3         : Y              
-sw[6]                        : AA10      : input  : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT               : AA10      :        :                   :         : 3         :                
 RESERVED_INPUT               : AA11      :        :                   :         : 4         :                
 RESERVED_INPUT               : AA12      :        :                   :         : 4         :                
 RESERVED_INPUT               : AA13      :        :                   :         : 4         :                
@@ -115,8 +115,8 @@ RESERVED_INPUT               : AA20      :        :                   :         
 RESERVED_INPUT               : AA21      :        :                   :         : 5         :                
 RESERVED_INPUT               : AA22      :        :                   :         : 5         :                
 GND                          : AB1       : gnd    :                   :         :           :                
-hex1[6]                      : AB2       : output : 2.5 V             :         : 3         : Y              
-hex1[5]                      : AB3       : output : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT               : AB2       :        :                   :         : 3         :                
+RESERVED_INPUT               : AB3       :        :                   :         : 3         :                
 RESERVED_INPUT               : AB4       :        :                   :         : 3         :                
 RESERVED_INPUT               : AB5       :        :                   :         : 3         :                
 RESERVED_INPUT               : AB6       :        :                   :         : 3         :                
@@ -149,10 +149,10 @@ RESERVED_INPUT               : B10       :        :                   :         
 RESERVED_INPUT               : B11       :        :                   :         : 7         :                
 sw[5]                        : B12       : input  : 2.5 V             :         : 7         : Y              
 GND                          : B13       : gnd    :                   :         :           :                
-RESERVED_INPUT               : B14       :        :                   :         : 7         :                
+sw[8]                        : B14       : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : B15       :        :                   :         : 7         :                
-RESERVED_INPUT               : B16       :        :                   :         : 7         :                
-RESERVED_INPUT               : B17       :        :                   :         : 7         :                
+hex1[3]                      : B16       : output : 2.5 V             :         : 7         : Y              
+hex1[0]                      : B17       : output : 2.5 V             :         : 7         : Y              
 GND                          : B18       : gnd    :                   :         :           :                
 hex2[4]                      : B19       : output : 2.5 V             :         : 7         : Y              
 hex2[6]                      : B20       : output : 2.5 V             :         : 6         : Y              
@@ -175,7 +175,7 @@ hex0[6]                      : C14       : output : 2.5 V             :         
 hex0[4]                      : C15       : output : 2.5 V             :         : 7         : Y              
 hex0[3]                      : C16       : output : 2.5 V             :         : 7         : Y              
 hex0[0]                      : C17       : output : 2.5 V             :         : 7         : Y              
-RESERVED_INPUT               : C18       :        :                   :         : 7         :                
+hex1[6]                      : C18       : output : 2.5 V             :         : 7         : Y              
 hex3[3]                      : C19       : output : 2.5 V             :         : 7         : Y              
 hex3[2]                      : C20       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : C21       :        :                   :         : 6         :                
@@ -197,15 +197,15 @@ RESERVED_INPUT               : D14       :        :                   :         
 hex0[7]                      : D15       : output : 2.5 V             :         : 7         : Y              
 GND                          : D16       : gnd    :                   :         :           :                
 hex0[1]                      : D17       : output : 2.5 V             :         : 7         : Y              
-RESERVED_INPUT               : D18       :        :                   :         : 6         :                
+hex1[5]                      : D18       : output : 2.5 V             :         : 6         : Y              
 hex3[1]                      : D19       : output : 2.5 V             :         : 6         : Y              
 GND                          : D20       : gnd    :                   :         :           :                
 RESERVED_INPUT               : D21       :        :                   :         : 6         :                
 hex3[7]                      : D22       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : E1        :        :                   :         : 1B        :                
 GND                          : E2        : gnd    :                   :         :           :                
-RESERVED_INPUT               : E3        :        :                   :         : 1A        :                
-RESERVED_INPUT               : E4        :        :                   :         : 1A        :                
+~ALTERA_ADC2IN8~             : E3        : input  : 2.5 V             :         : 1A        : N              
+~ALTERA_ADC2IN1~             : E4        : input  : 2.5 V             :         : 1A        : N              
 NC                           : E5        :        :                   :         :           :                
 RESERVED_INPUT               : E6        :        :                   :         : 8         :                
 GND                          : E7        : gnd    :                   :         :           :                
@@ -219,16 +219,16 @@ RESERVED_INPUT               : E14       :        :                   :         
 hex0[5]                      : E15       : output : 2.5 V             :         : 7         : Y              
 hex0[2]                      : E16       : output : 2.5 V             :         : 7         : Y              
 hex3[0]                      : E17       : output : 2.5 V             :         : 6         : Y              
-RESERVED_INPUT               : E18       :        :                   :         : 6         :                
+hex1[4]                      : E18       : output : 2.5 V             :         : 6         : Y              
 hex4[4]                      : E19       : output : 2.5 V             :         : 6         : Y              
 hex4[5]                      : E20       : output : 2.5 V             :         : 6         : Y              
 hex3[4]                      : E21       : output : 2.5 V             :         : 6         : Y              
 hex3[5]                      : E22       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : F1        :        :                   :         : 1B        :                
 RESERVED_INPUT               : F2        :        :                   :         : 1B        :                
-RESERVED_INPUT               : F3        :        :                   :         : 1A        :                
-RESERVED_INPUT               : F4        :        :                   :         : 1A        :                
-RESERVED_INPUT               : F5        :        :                   :         : 1A        :                
+~ALTERA_ADC2IN4~             : F3        : input  : 2.5 V             :         : 1A        : N              
+~ALTERA_ADC1IN2~             : F4        : input  : 2.5 V             :         : 1A        : N              
+~ALTERA_ADC1IN1~             : F5        : input  : 2.5 V             :         : 1A        : N              
 NC                           : F6        :        :                   :         :           :                
 RESERVED_INPUT               : F7        :        :                   :         : 8         :                
 ~ALTERA_CONF_DONE~ / RESERVED_INPUT : F8        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
@@ -238,7 +238,7 @@ VCCIO8                       : F11       : power  :                   : 2.5V    
 VCCIO7                       : F12       : power  :                   : 2.5V    : 7         :                
 GND                          : F13       : gnd    :                   :         :           :                
 VCCIO7                       : F14       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT               : F15       :        :                   :         : 7         :                
+sw[9]                        : F15       : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : F16       :        :                   :         : 7         :                
 hex4[7]                      : F17       : output : 2.5 V             :         : 6         : Y              
 hex4[6]                      : F18       : output : 2.5 V             :         : 6         : Y              
@@ -248,8 +248,8 @@ hex3[6]                      : F21       : output : 2.5 V             :         
 RESERVED_INPUT               : F22       :        :                   :         : 6         :                
 RESERVED_INPUT               : G1        :        :                   :         : 1B        :                
 altera_reserved_tck          : G2        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
-RESERVED_INPUT               : G3        :        :                   :         : 1A        :                
-RESERVED_INPUT               : G4        :        :                   :         : 1A        :                
+~ALTERA_ADC2IN6~             : G3        : input  : 2.5 V             :         : 1A        : N              
+~ALTERA_ADC2IN3~             : G4        : input  : 2.5 V             :         : 1A        : N              
 ANAIN1                       : G5        :        :                   :         :           :                
 GND                          : G6        : gnd    :                   :         :           :                
 VCCD_PLL3                    : G7        : power  :                   : 1.2V    :           :                
@@ -270,8 +270,8 @@ GND                          : G21       : gnd    :                   :         
 RESERVED_INPUT               : G22       :        :                   :         : 6         :                
 RESERVED_INPUT               : H1        :        :                   :         : 1B        :                
 altera_reserved_tms          : H2        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
-RESERVED_INPUT               : H3        :        :                   :         : 1A        :                
-RESERVED_INPUT               : H4        :        :                   :         : 1A        :                
+~ALTERA_ADC1IN6~             : H3        : input  : 2.5 V             :         : 1A        : N              
+~ALTERA_ADC2IN5~             : H4        : input  : 2.5 V             :         : 1A        : N              
 REFGND                       : H5        :        :                   :         :           :                
 ADC_VREF                     : H6        :        :                   :         :           :                
 VCCA_ADC                     : H7        : power  :                   : 2.5V    :           :                
@@ -292,13 +292,13 @@ RESERVED_INPUT               : H21       :        :                   :         
 RESERVED_INPUT               : H22       :        :                   :         : 6         :                
 RESERVED_INPUT               : J1        :        :                   :         : 1B        :                
 GND                          : J2        : gnd    :                   :         :           :                
-RESERVED_INPUT               : J3        :        :                   :         : 1A        :                
-RESERVED_INPUT               : J4        :        :                   :         : 1A        :                
+~ALTERA_ADC2IN2~             : J3        : input  : 2.5 V             :         : 1A        : N              
+~ALTERA_ADC1IN5~             : J4        : input  : 2.5 V             :         : 1A        : N              
 ANAIN2                       : J5        :        :                   :         :           :                
 GND                          : J6        : gnd    :                   :         :           :                
 VCCINT                       : J7        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT               : J8        :        :                   :         : 1A        :                
-RESERVED_INPUT               : J9        :        :                   :         : 1A        :                
+~ALTERA_ADC1IN3~             : J8        : input  : 2.5 V             :         : 1A        : N              
+~ALTERA_ADC1IN4~             : J9        : input  : 2.5 V             :         : 1A        : N              
 RESERVED_INPUT               : J10       :        :                   :         : 8         :                
 RESERVED_INPUT               : J11       :        :                   :         : 7         :                
 RESERVED_INPUT               : J12       :        :                   :         : 7         :                
@@ -315,9 +315,9 @@ RESERVED_INPUT               : J22       :        :                   :         
 RESERVED_INPUT               : K1        :        :                   :         : 1B        :                
 RESERVED_INPUT               : K2        :        :                   :         : 1B        :                
 GND                          : K3        : gnd    :                   :         :           :                
-RESERVED_INPUT               : K4        :        :                   :         : 1A        :                
-RESERVED_INPUT               : K5        :        :                   :         : 1A        :                
-RESERVED_INPUT               : K6        :        :                   :         : 1A        :                
+~ALTERA_ADC2IN7~             : K4        : input  : 2.5 V             :         : 1A        : N              
+~ALTERA_ADC1IN7~             : K5        : input  : 2.5 V             :         : 1A        : N              
+~ALTERA_ADC1IN8~             : K6        : input  : 2.5 V             :         : 1A        : N              
 VCCIO1A                      : K7        : power  :                   : 2.5V    : 1A        :                
 RESERVED_INPUT               : K8        :        :                   :         : 1B        :                
 RESERVED_INPUT               : K9        :        :                   :         : 1B        :                
@@ -534,12 +534,12 @@ GND                          : W21       : gnd    :                   :         
 RESERVED_INPUT               : W22       :        :                   :         : 5         :                
 RESERVED_INPUT               : Y1        :        :                   :         : 3         :                
 RESERVED_INPUT               : Y2        :        :                   :         : 3         :                
-hex1[0]                      : Y3        : output : 2.5 V             :         : 3         : Y              
-sw[9]                        : Y4        : input  : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT               : Y3        :        :                   :         : 3         :                
+RESERVED_INPUT               : Y4        :        :                   :         : 3         :                
 txd                          : Y5        : output : 2.5 V             :         : 3         : Y              
 rxd                          : Y6        : input  : 2.5 V             :         : 3         : Y              
-sw[8]                        : Y7        : input  : 2.5 V             :         : 3         : Y              
-sw[7]                        : Y8        : input  : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT               : Y7        :        :                   :         : 3         :                
+RESERVED_INPUT               : Y8        :        :                   :         : 3         :                
 GND                          : Y9        : gnd    :                   :         :           :                
 RESERVED_INPUT               : Y10       :        :                   :         : 3         :                
 ss_n[0]                      : Y11       : output : 2.5 V             :         : 4         : Y              
