@@ -1,0 +1,18 @@
+Fitter Status : Successful - Tue Nov 14 11:21:59 2017
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : sistema_basico2
+Top-level Entity Name : sistema_basico2
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 3,653 / 49,760 ( 7 % )
+    Total combinational functions : 3,312 / 49,760 ( 7 % )
+    Dedicated logic registers : 2,139 / 49,760 ( 4 % )
+Total registers : 2139
+Total pins : 28 / 360 ( 8 % )
+Total virtual pins : 0
+Total memory bits : 331,264 / 1,677,312 ( 20 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

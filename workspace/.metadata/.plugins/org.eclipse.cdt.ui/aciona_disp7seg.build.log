@@ -1,0 +1,18 @@
+07:52:34 **** Incremental Build of configuration Nios II for project aciona_disp7seg ****
+make all 
+Info: Building ../_bspGeral/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../_bspGeral/
+[BSP build complete]
+Info: Linking aciona_disp7seg.elf
+nios2-elf-g++  -T'../_bspGeral//linker.x' -msys-crt0='../_bspGeral//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../_bspGeral/  -msmallc  -Wl,-Map=aciona_disp7seg.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o aciona_disp7seg.elf obj/default/main.o -lm -msys-lib=m
+../_bspGeral/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\intelFPGA_lite\_Projetos_NIOSII\SistBasi2_ixtopor\software\_bspGeral/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert aciona_disp7seg.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x211d0 --timestamp 1508756809 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --sopcinfo C:/intelFPGA_lite/_Projetos_NIOSII/SistBasi2_ixtopor/software/_bspGeral/../../sopc_2.sopcinfo
+Info: (aciona_disp7seg.elf) 6236 Bytes program size (code + initialized data).
+Info:                       32 KBytes free for stack + heap.
+Info: Creating aciona_disp7seg.objdump
+nios2-elf-objdump --disassemble --syms --all-header aciona_disp7seg.elf >aciona_disp7seg.objdump
+[aciona_disp7seg build complete]
+
+07:52:38 Build Finished (took 4s.193ms)
+

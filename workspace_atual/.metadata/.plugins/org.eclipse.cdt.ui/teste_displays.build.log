@@ -1,0 +1,18 @@
+09:23:16 **** Incremental Build of configuration Nios II for project teste_displays ****
+make all 
+Info: Building ../bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../bsp//HAL/inc -I../bsp/ -I../bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking teste_displays.elf
+nios2-elf-g++  -T'../bsp//linker.x' -msys-crt0='../bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../bsp/   -Wl,-Map=teste_displays.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o teste_displays.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert teste_displays.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x211d0 --timestamp 1508756809 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/intelFPGA_lite/_Projeto_Nios/SistBasi2_ixtopor" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/intelFPGA_lite/_Projeto_Nios/SistBasi2_ixtopor/software/bsp/../../sopc_2.sopcinfo
+Info: (teste_displays.elf) 31 KBytes program size (code + initialized data).
+Info:                      720 Bytes free for stack + heap.
+Info: Creating teste_displays.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source teste_displays.elf >teste_displays.objdump
+[teste_displays build complete]
+
+09:23:18 Build Finished (took 1s.710ms)
+

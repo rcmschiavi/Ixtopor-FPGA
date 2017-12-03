@@ -1,0 +1,47 @@
+-- Autor: Rodolfo Schiavi
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_unsigned.all;
+use IEEE.NUMERIC_STD.all;
+
+entity controle_fio is
+	port(
+		clk: in std_logic;
+		PWM: out std_logic;
+		razao: in std_logic_vector(7 downto 0) := "00100000"
+		);
+end controle_fio;
+
+architecture modulation of controle_fio is
+	signal signal_pwm: std_logic := '0';
+	
+BEGIN
+		PROCESS (clk) -- Duvida, porque colocar o clk nesse parenteses
+		
+		constant prescaler: integer range 0 to 32768 := 196; -- Divisor do clock para chegar a 1kHz
+		variable t: integer range 0 to 32768 := 0;
+		variable t_mod: integer range 0 to 255;
+		constant fundo_escala: integer range 0 to 255:=255;
+		
+		BEGIN
+			if(rising_edge(clk)) then
+				t := t + 1;
+				if(prescaler = t) then 
+					t := 0;
+					t_mod:= t_mod + 1;
+					if(t_mod=255) then
+						t_mod:=0;
+					end if;
+					if(t_mod <= CONV_INTEGER(razao)) then
+						signal_pwm <= '0';
+					end if;
+					if(t_mod >= fundo_escala-CONV_INTEGER(razao)) then
+						signal_pwm <= '1';
+					end if;
+				end if;
+			end if;
+		end process;
+		PWM <= signal_pwm;
+												
+end modulation;

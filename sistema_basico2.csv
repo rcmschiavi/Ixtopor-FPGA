@@ -1,0 +1,68 @@
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+# File: C:\Curso_NIOS_II\projetos\sopc_2\sistema_basico2\sistema_basico2.csv
+# Generated on: Thu Oct 16 09:51:44 2014
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair
+botoes[4],Input,,,,,,,,
+botoes[3],Input,,,,,,,,
+botoes[2],Input,,,,,,,,
+botoes[1],Input,,,,,,,,
+botoes[0],Input,,,,,,,,
+clk,Input,,,,,,,,
+entrada_c[7],Input,,,,,,,,
+entrada_c[6],Input,,,,,,,,
+entrada_c[5],Input,,,,,,,,
+entrada_c[4],Input,,,,,,,,
+entrada_c[3],Input,,,,,,,,
+entrada_c[2],Input,,,,,,,,
+entrada_c[1],Input,,,,,,,,
+entrada_c[0],Input,,,,,,,,
+miso,Input,,,,,,,,
+mosi,Output,,,,,,,,
+porta_a[7],Bidir,,,,,,,,
+porta_a[6],Bidir,,,,,,,,
+porta_a[5],Bidir,,,,,,,,
+porta_a[4],Bidir,,,,,,,,
+porta_a[3],Bidir,,,,,,,,
+porta_a[2],Bidir,,,,,,,,
+porta_a[1],Bidir,,,,,,,,
+porta_a[0],Bidir,,,,,,,,
+porta_b[7],Bidir,,,,,,,,
+porta_b[6],Bidir,,,,,,,,
+porta_b[5],Bidir,,,,,,,,
+porta_b[4],Bidir,,,,,,,,
+porta_b[3],Bidir,,,,,,,,
+porta_b[2],Bidir,,,,,,,,
+porta_b[1],Bidir,,,,,,,,
+porta_b[0],Bidir,,,,,,,,
+rst_n,Input,,,,,,,,
+rxd,Input,,,,,,,,
+saida_c[7],Output,,,,,,,,
+saida_c[6],Output,,,,,,,,
+saida_c[5],Output,,,,,,,,
+saida_c[4],Output,,,,,,,,
+saida_c[3],Output,,,,,,,,
+saida_c[2],Output,,,,,,,,
+saida_c[1],Output,,,,,,,,
+saida_c[0],Output,,,,,,,,
+sclk,Output,,,,,,,,
+ss_n[1],Output,,,,,,,,
+ss_n[0],Output,,,,,,,,
+to,Output,,,,,,,,
+txd,Output,,,,,,,,

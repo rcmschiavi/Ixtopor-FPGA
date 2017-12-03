@@ -1,0 +1,28 @@
+!SESSION 2017-10-31 09:20:08.570 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-10-31 09:22:13.980
+!MESSAGE Indexed 'bsp' (89 sources, 69 headers) in 2,35 sec: 1.352 declarations; 3.368 references; 120 unresolved inclusions; 6 syntax errors; 202 unresolved names (4,10%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-10-31 09:22:16.651
+!MESSAGE Indexed 'teste_displays' (1 sources, 0 headers) in 0,00 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-10-31 09:22:54.020
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x211d0 --id=0xf2 --timestamp=1508756809]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-10-31 09:22:56.207
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x211d0 --id=0xf2 --timestamp=1508756809 /cygdrive/c/intelFPGA_lite/_Projeto_Nios/SistBasi2_ixtopor/software/teste_displays/teste_displays.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-10-31 09:23:18.730
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-10-31 09:23:19.414
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x211d0 --id=0xf2 --timestamp=1508756809]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-10-31 09:23:21.449
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x211d0 --id=0xf2 --timestamp=1508756809 /cygdrive/c/intelFPGA_lite/_Projeto_Nios/SistBasi2_ixtopor/software/teste_displays/teste_displays.elf]

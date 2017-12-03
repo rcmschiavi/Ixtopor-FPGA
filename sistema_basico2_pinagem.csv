@@ -1,0 +1,52 @@
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+# File: C:\Curso_NIOS_II\projetos\sopc_2\sistema_basico2\sistema_basico2_pinagem.csv
+# Generated on: Thu Oct 16 10:34:36 2014
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair
+botoes[4],Input,PIN_53,3,B3_N0,,,,,
+botoes[3],Input,PIN_54,4,B4_N1,,,,,
+botoes[2],Input,PIN_89,5,B5_N0,,,,,
+botoes[1],Input,PIN_55,4,B4_N1,,,,,
+botoes[0],Input,PIN_90,6,B6_N1,,,,,
+clk,Input,PIN_88,5,B5_N0,,,,,
+miso,Input,PIN_110,7,B7_N0,,,,,
+mosi,Output,PIN_111,7,B7_N0,,,,,
+porta_a[7],Bidir,PIN_135,8,B8_N0,,,,,
+porta_a[6],Bidir,PIN_136,8,B8_N0,,,,,
+porta_a[5],Bidir,PIN_137,8,B8_N0,,,,,
+porta_a[4],Bidir,PIN_141,8,B8_N1,,,,,
+porta_a[3],Bidir,PIN_142,8,B8_N1,,,,,
+porta_a[2],Bidir,PIN_143,8,B8_N1,,,,,
+porta_a[1],Bidir,PIN_144,8,B8_N1,,,,,
+porta_a[0],Bidir,PIN_7,1,B1_N0,,,,,
+porta_b[7],Bidir,PIN_115,7,B7_N0,,,,,
+porta_b[6],Bidir,PIN_119,7,B7_N1,,,,,
+porta_b[5],Bidir,PIN_120,7,B7_N1,,,,,
+porta_b[4],Bidir,PIN_121,7,B7_N1,,,,,
+porta_b[3],Bidir,PIN_125,7,B7_N1,,,,,
+porta_b[2],Bidir,PIN_132,8,B8_N0,,,,,
+porta_b[1],Bidir,PIN_133,8,B8_N0,,,,,
+porta_b[0],Bidir,PIN_134,8,B8_N0,,,,,
+rst_n,Input,PIN_52,3,B3_N0,,,,,
+rxd,Input,PIN_104,6,B6_N1,,,,,
+sclk,Output,PIN_106,6,B6_N0,,,,,
+ss_n[1],Output,PIN_112,7,B7_N0,,,,,
+ss_n[0],Output,PIN_113,7,B7_N0,,,,,
+to,Output,PIN_114,7,B7_N0,,,,,
+txd,Output,PIN_105,6,B6_N0,,,,,

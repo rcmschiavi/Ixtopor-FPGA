@@ -1,0 +1,133 @@
+Flow report for sistema_basico2
+Sat Dec 02 23:02:11 2017
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Sat Dec 02 23:02:10 2017       ;
+; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                      ; sistema_basico2                             ;
+; Top-level Entity Name              ; sistema_basico2                             ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C7G                              ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 3,741                                       ;
+;     Total combinational functions  ; 3,102                                       ;
+;     Dedicated logic registers      ; 2,102                                       ;
+; Total registers                    ; 2102                                        ;
+; Total pins                         ; 27                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 331,264                                     ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/02/2017 23:01:07 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; sistema_basico2     ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                              ;
++-------------------------------------+----------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                    ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 1097975843555.151226286708620                            ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                     ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                   ; <None>        ; --          ; --             ;
+; IP_SEARCH_PATHS                     ; c:\intelfpga_lite\_projeto_nios\sistbasi2_ixtopor\sopc_2 ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                       ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sopc_2/synthesis/../sopc_2.cmp                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; sopc_2/synthesis/../../sopc_2.qsys                       ; --            ; --          ; --             ;
+; NUM_PARALLEL_PROCESSORS             ; All                                                      ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                        ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                        ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                               ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                               ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                   ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                   ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                   ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                      ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                    ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                             ; --            ; --          ; --             ;
+; SLD_FILE                            ; sopc_2/synthesis/sopc_2.regmap                           ; --            ; --          ; --             ;
+; SLD_FILE                            ; sopc_2/synthesis/sopc_2.debuginfo                        ; --            ; --          ; --             ;
+; SLD_INFO                            ; QSYS_NAME sopc_2 HAS_SOPCINFO 1 GENERATION_ID 1510059784 ; --            ; sopc_2      ; --             ;
+; SOPCINFO_FILE                       ; sopc_2/synthesis/../../sopc_2.sopcinfo                   ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                       ; --            ; --          ; --             ;
++-------------------------------------+----------------------------------------------------------+---------------+-------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:00     ; 1.0                     ; 924 MB              ; 00:01:32                           ;
+; Total                ; 00:01:00     ; --                      ; --                  ; 00:01:32                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-KVPCVGA  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off sistema_basico2 -c sistema_basico2
+
+
+

@@ -1,0 +1,15 @@
+#include "sys/alt_stdio.h"
+#include <system.h>
+#include <io.h>
+
+#define chaves SW_BASE
+#define leds HEX_0_BASE
+
+int main()
+{
+  alt_putstr("Hello from Nios II!\n");
+
+  /* Event loop never exits. */
+
+  return 0;
+}

@@ -1,0 +1,50 @@
+-----------------------------------------------
+---
+--
+--
+--
+----------------------------------------------
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+
+entity tb_gerador_seno is
+end entity tb_gerador_seno;
+
+
+architecture simula of tb_gerador_seno is
+  signal  clk,
+			 clear_n		:  std_logic;
+  signal saida_rom	: std_logic_vector (7 downto 0);
+
+begin
+
+	-- unity under test:
+	uut:  entity work.gerador_seno
+	port map (
+		clk, clear_n, saida_rom 	
+	);
+	
+	simulando :  process
+	begin
+		clear_n <= '0';  -- Reset de partida..
+		clk  <=  '0';
+		
+		wait for 10 ms;  -- Intervalo de reset...
+		clear_n <= '1';  
+		
+		for cont in integer range 0 to 20000000 loop
+		   wait for 10 ns;
+			clk <= not clk;			
+		
+		end loop;
+	
+	   wait;
+		
+	end process;
+
+
+end architecture simula;

@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+newApplicationWizardPage.defaultLocation=C\:\\intelFPGA_lite\\SistBasi2_ixtopor\\software\\teste1
+newBspWizardPage.defaultLocation=C\:\\intelFPGA_lite\\SistBasi2_ixtopor\\software\\bsp_2
+newBspWizardPage.sopcinfoFile=C\:\\intelFPGA_lite\\SistBasi2_ixtopor\\sopc_2.sopcinfo
+newSoftwareExampleWizardPage.defaultLocation=C\:\\intelFPGA_lite\\SistBasi2_ixtopor\\software\\teste_1
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\intelFPGA_lite\\SistBasi2_ixtopor\\sopc_2.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\intelFPGA_lite\\SistBasi2_ixtopor\\software\\teste_1_bsp
