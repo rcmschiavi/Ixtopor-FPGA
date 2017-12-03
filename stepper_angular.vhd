@@ -14,21 +14,15 @@ entity stepper_angular is
 	 clk_step  : out std_logic :='0'; -- Output clock for the driver generate with this logic
 	 velocity_in : in std_logic_vector(3 downto 0) :="0101"; -- velocity_in with 16 options, can be increased
 	 distance_in : in integer range 0 to 511 := 50; -- Millimeters that the stepper will move
-	 reset : in std_logic := '1'; -- Reset for cleaning the variables
-	 dir_in: in std_logic;	-- Direction of the movement, necessary because the end stop logic is inside the block
-	 dir: out std_logic;	-- Output direction for the driver
-	 end_stop_p,end_stop_m: in std_logic := '0'; -- End stop for direction 1 and 0
-	 end_stop: out std_logic := '0' -- End stop for direction 0
+	 reset : in std_logic := '1' -- Reset for cleaning the variables
 	 );
 end stepper_angular;
 
 architecture Behavioral of stepper_angular is
 	signal state: std_logic :='0'; -- Logic signal for the stepper clock
-	signal signal_dir: std_logic:=dir_in;
-	signal signal_end_stop: std_logic:='0';
 
 begin
-   PROCESS (clk_50Mhz, velocity_in, reset,dir_in)
+   PROCESS (clk_50Mhz, velocity_in, reset)
 
    VARIABLE t :INTEGER RANGE 0 TO 2097151:= 0; -- Time counter
 	Variable dividend_acel: INTEGER RANGE 0 TO 5000020:= 5000000;	-- Variable to apply aceleration
@@ -56,22 +50,10 @@ begin
 		END IF;
 		IF (reset = '1') then -- Reset the distance variable
 			distance:=distance_in*90;
-			signal_end_stop<='0';
-			signal_dir<=dir_in;
-		END IF;
-		IF(end_stop_p='1') then -- Verify the end stop +, could be assyncronous, but will not make difference uder this velocities
-			-- change the direction and "walk" a little for safety
-			distance := 50; 		
-			signal_dir <= '0';
-		ELSIF(end_stop_m='1') then -- Verify the end stop 
-		-- change the direction and "walk" a little for safety
-			distance := 50;
-			signal_dir <= '1';
 		END IF;
 	END PROCESS;
 	
 	-- Apply the signals to the ports
-	dir<=signal_dir; 
 	clk_step<=state;
 
 end Behavioral;

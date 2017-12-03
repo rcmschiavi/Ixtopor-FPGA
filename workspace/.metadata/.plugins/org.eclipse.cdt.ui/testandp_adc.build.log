@@ -1,4 +1,4 @@
-16:05:44 **** Incremental Build of configuration Nios II for project testandp_adc ****
+20:41:51 **** Incremental Build of configuration Nios II for project testandp_adc ****
 make all 
 Info: Building ../_bspGeral/
 C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../_bspGeral/
@@ -16,5 +16,5 @@ Info: Creating testandp_adc.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source testandp_adc.elf >testandp_adc.objdump
 [testandp_adc build complete]
 
-16:05:46 Build Finished (took 1s.843ms)
+20:41:56 Build Finished (took 5s.781ms)
 
