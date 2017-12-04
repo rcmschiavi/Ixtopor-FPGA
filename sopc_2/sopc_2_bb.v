@@ -9,6 +9,10 @@ module sopc_2 (
 	hex3_export,
 	hex5_export,
 	hex_4_export,
+	motora_export,
+	motorb_export,
+	motorx_export,
+	motory_export,
 	porta_a_export,
 	porta_b_export,
 	reset_reset_n,
@@ -31,6 +35,10 @@ module sopc_2 (
 	output	[7:0]	hex3_export;
 	output	[7:0]	hex5_export;
 	output	[7:0]	hex_4_export;
+	output	[15:0]	motora_export;
+	output	[15:0]	motorb_export;
+	output	[15:0]	motorx_export;
+	output	[15:0]	motory_export;
 	inout	[7:0]	porta_a_export;
 	inout	[7:0]	porta_b_export;
 	input		reset_reset_n;

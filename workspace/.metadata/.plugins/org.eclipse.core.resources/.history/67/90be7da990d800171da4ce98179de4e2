@@ -1,0 +1,11 @@
+/*
+ * main.c
+ *
+ *  Created on: 03/12/2017
+ *      Author: RodolfoSchiavi
+ */
+
+#include <stdio.h>
+#include "altera_up_avalon_adc.h"
+
+

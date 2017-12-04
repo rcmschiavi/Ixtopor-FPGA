@@ -22,7 +22,7 @@ architecture Behavioral of stepper_angular is
 	signal state: std_logic :='0'; -- Logic signal for the stepper clock
 
 begin
-   PROCESS (clk_50Mhz, velocity_in, reset)
+   PROCESS (clk_50Mhz, velocity_in, reset, distance_in)
 
    VARIABLE t :INTEGER RANGE 0 TO 2097151:= 0; -- Time counter
 	Variable dividend_acel: INTEGER RANGE 0 TO 5000020:= 5000000;	-- Variable to apply aceleration

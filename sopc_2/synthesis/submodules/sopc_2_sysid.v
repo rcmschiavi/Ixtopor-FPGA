@@ -49,7 +49,7 @@ module sopc_2_sysid (
 
   wire    [ 31: 0] readdata;
   //control_slave, which is an e_avalon_slave
-  assign readdata = address ? 1512311939 : 242;
+  assign readdata = address ? 1512350717 : 242;
 
 endmodule
 

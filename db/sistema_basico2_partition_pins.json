@@ -240,6 +240,46 @@
 					"strict" : false
 				},
 				{
+					"name" : "motora[15]",
+					"strict" : false
+				},
+				{
+					"name" : "motora[14]",
+					"strict" : false
+				},
+				{
+					"name" : "motorb[15]",
+					"strict" : false
+				},
+				{
+					"name" : "motorb[14]",
+					"strict" : false
+				},
+				{
+					"name" : "motorx[15]",
+					"strict" : false
+				},
+				{
+					"name" : "motory[15]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[7]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[6]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[5]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[4]",
+					"strict" : false
+				},
+				{
 					"name" : "ss_n[1]",
 					"strict" : false
 				},
@@ -316,43 +356,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "motorx[3]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[2]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[1]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[0]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[13]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[14]",
-					"strict" : false
-				},
-				{
 					"name" : "endmxp",
 					"strict" : false
 				},
 				{
 					"name" : "endmxm",
-					"strict" : false
-				},
-				{
-					"name" : "motory[14]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[13]",
 					"strict" : false
 				},
 				{
@@ -364,223 +372,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "motory[3]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[2]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[1]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[0]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[3]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[2]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[1]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[0]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[13]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[3]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[2]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[1]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[0]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[13]",
-					"strict" : false
-				},
-				{
-					"name" : "temp[0]",
-					"strict" : false
-				},
-				{
-					"name" : "temp[1]",
-					"strict" : false
-				},
-				{
-					"name" : "temp[2]",
-					"strict" : false
-				},
-				{
-					"name" : "temp[3]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[11]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[10]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[9]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[8]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[7]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[6]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[5]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[4]",
-					"strict" : false
-				},
-				{
-					"name" : "motorx[12]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[11]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[10]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[9]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[8]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[7]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[6]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[5]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[4]",
-					"strict" : false
-				},
-				{
-					"name" : "motory[12]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[11]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[10]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[9]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[8]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[7]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[6]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[5]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[4]",
-					"strict" : false
-				},
-				{
-					"name" : "motora[12]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[11]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[10]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[9]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[8]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[7]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[6]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[5]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[4]",
-					"strict" : false
-				},
-				{
-					"name" : "motorb[12]",
-					"strict" : false
-				},
-				{
 					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "entr[7]",
 					"strict" : false
 				},
 				{
@@ -588,7 +384,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "entr[6]",
+					"strict" : false
+				},
+				{
 					"name" : "sw[6]",
+					"strict" : false
+				},
+				{
+					"name" : "entr[5]",
 					"strict" : false
 				},
 				{
@@ -596,11 +400,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "entr[4]",
+					"strict" : false
+				},
+				{
 					"name" : "sw[4]",
 					"strict" : false
 				},
 				{
+					"name" : "entr[3]",
+					"strict" : false
+				},
+				{
 					"name" : "sw[3]",
+					"strict" : false
+				},
+				{
+					"name" : "entr[2]",
 					"strict" : false
 				},
 				{

@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="127b6f86395e31fcdc42"/>
+    <hash md5_digest_80b="3b43399b139fcd22a730"/>
   </project>
   <file_info>
     <file device="10M50DAF484C7G" path="sistema_basico2.sof" usercode="0xFFFFFFFF"/>
@@ -99,7 +99,7 @@
     </sld_info>
     <sld_info hpath="sopc_2:inst" name="inst">
       <assignment_values>
-        <assignment_value text="QSYS_NAME sopc_2 HAS_SOPCINFO 1 GENERATION_ID 1512311939"/>
+        <assignment_value text="QSYS_NAME sopc_2 HAS_SOPCINFO 1 GENERATION_ID 1512350717"/>
       </assignment_values>
       <parameters/>
     </sld_info>

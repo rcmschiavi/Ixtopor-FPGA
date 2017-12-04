@@ -28,7 +28,7 @@ architecture Behavioral of stepper_linear is
 	signal signal_end_stop: std_logic:='0';
 
 begin
-   PROCESS (clk_50Mhz, velocity_in, reset,dir_in)
+   PROCESS (clk_50Mhz, velocity_in, reset,dir_in,end_stop_p,end_stop_m,distance_in)
 
    VARIABLE t :INTEGER RANGE 0 TO 2097151:= 0; -- Time counter
 	Variable dividend_acel: INTEGER RANGE 0 TO 5000020:= 5000000;	-- Variable to apply aceleration

@@ -8,27 +8,31 @@ use IEEE.numeric_std.all;
 
 entity sopc_2 is
 	port (
-		botao_export     : in    std_logic                    := '0';             --     botao.export
-		clk_clk          : in    std_logic                    := '0';             --       clk.clk
-		entrada_c_export : in    std_logic_vector(7 downto 0) := (others => '0'); -- entrada_c.export
-		hex0_export      : out   std_logic_vector(7 downto 0);                    --      hex0.export
-		hex1_export      : out   std_logic_vector(7 downto 0);                    --      hex1.export
-		hex2_export      : out   std_logic_vector(7 downto 0);                    --      hex2.export
-		hex3_export      : out   std_logic_vector(7 downto 0);                    --      hex3.export
-		hex5_export      : out   std_logic_vector(7 downto 0);                    --      hex5.export
-		hex_4_export     : out   std_logic_vector(7 downto 0);                    --     hex_4.export
-		porta_a_export   : inout std_logic_vector(7 downto 0) := (others => '0'); --   porta_a.export
-		porta_b_export   : inout std_logic_vector(7 downto 0) := (others => '0'); --   porta_b.export
-		reset_reset_n    : in    std_logic                    := '0';             --     reset.reset_n
-		saida_c_export   : out   std_logic_vector(7 downto 0);                    --   saida_c.export
-		spi_MISO         : in    std_logic                    := '0';             --       spi.MISO
-		spi_MOSI         : out   std_logic;                                       --          .MOSI
-		spi_SCLK         : out   std_logic;                                       --          .SCLK
-		spi_SS_n         : out   std_logic_vector(1 downto 0);                    --          .SS_n
-		sw_export        : in    std_logic_vector(9 downto 0) := (others => '0'); --        sw.export
-		to_export        : out   std_logic;                                       --        to.export
-		uart_rxd         : in    std_logic                    := '0';             --      uart.rxd
-		uart_txd         : out   std_logic                                        --          .txd
+		botao_export     : in    std_logic                     := '0';             --     botao.export
+		clk_clk          : in    std_logic                     := '0';             --       clk.clk
+		entrada_c_export : in    std_logic_vector(7 downto 0)  := (others => '0'); -- entrada_c.export
+		hex0_export      : out   std_logic_vector(7 downto 0);                     --      hex0.export
+		hex1_export      : out   std_logic_vector(7 downto 0);                     --      hex1.export
+		hex2_export      : out   std_logic_vector(7 downto 0);                     --      hex2.export
+		hex3_export      : out   std_logic_vector(7 downto 0);                     --      hex3.export
+		hex5_export      : out   std_logic_vector(7 downto 0);                     --      hex5.export
+		hex_4_export     : out   std_logic_vector(7 downto 0);                     --     hex_4.export
+		motora_export    : out   std_logic_vector(15 downto 0);                    --    motora.export
+		motorb_export    : out   std_logic_vector(15 downto 0);                    --    motorb.export
+		motorx_export    : out   std_logic_vector(15 downto 0);                    --    motorx.export
+		motory_export    : out   std_logic_vector(15 downto 0);                    --    motory.export
+		porta_a_export   : inout std_logic_vector(7 downto 0)  := (others => '0'); --   porta_a.export
+		porta_b_export   : inout std_logic_vector(7 downto 0)  := (others => '0'); --   porta_b.export
+		reset_reset_n    : in    std_logic                     := '0';             --     reset.reset_n
+		saida_c_export   : out   std_logic_vector(7 downto 0);                     --   saida_c.export
+		spi_MISO         : in    std_logic                     := '0';             --       spi.MISO
+		spi_MOSI         : out   std_logic;                                        --          .MOSI
+		spi_SCLK         : out   std_logic;                                        --          .SCLK
+		spi_SS_n         : out   std_logic_vector(1 downto 0);                     --          .SS_n
+		sw_export        : in    std_logic_vector(9 downto 0)  := (others => '0'); --        sw.export
+		to_export        : out   std_logic;                                        --        to.export
+		uart_rxd         : in    std_logic                     := '0';             --      uart.rxd
+		uart_txd         : out   std_logic                                         --          .txd
 	);
 end entity sopc_2;
 
@@ -183,6 +187,19 @@ architecture rtl of sopc_2 is
 			freeze     : in  std_logic                     := 'X'              -- freeze
 		);
 	end component sopc_2_memoria;
+
+	component sopc_2_motora is
+		port (
+			clk        : in  std_logic                     := 'X';             -- clk
+			reset_n    : in  std_logic                     := 'X';             -- reset_n
+			address    : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			write_n    : in  std_logic                     := 'X';             -- write_n
+			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			chipselect : in  std_logic                     := 'X';             -- chipselect
+			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
+			out_port   : out std_logic_vector(15 downto 0)                     -- export
+		);
+	end component sopc_2_motora;
 
 	component sopc_2_saida_C is
 		port (
@@ -387,6 +404,26 @@ architecture rtl of sopc_2 is
 			memoria_s1_byteenable                   : out std_logic_vector(3 downto 0);                     -- byteenable
 			memoria_s1_chipselect                   : out std_logic;                                        -- chipselect
 			memoria_s1_clken                        : out std_logic;                                        -- clken
+			motora_s1_address                       : out std_logic_vector(1 downto 0);                     -- address
+			motora_s1_write                         : out std_logic;                                        -- write
+			motora_s1_readdata                      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			motora_s1_writedata                     : out std_logic_vector(31 downto 0);                    -- writedata
+			motora_s1_chipselect                    : out std_logic;                                        -- chipselect
+			motorb_s1_address                       : out std_logic_vector(1 downto 0);                     -- address
+			motorb_s1_write                         : out std_logic;                                        -- write
+			motorb_s1_readdata                      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			motorb_s1_writedata                     : out std_logic_vector(31 downto 0);                    -- writedata
+			motorb_s1_chipselect                    : out std_logic;                                        -- chipselect
+			motorx_s1_address                       : out std_logic_vector(1 downto 0);                     -- address
+			motorx_s1_write                         : out std_logic;                                        -- write
+			motorx_s1_readdata                      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			motorx_s1_writedata                     : out std_logic_vector(31 downto 0);                    -- writedata
+			motorx_s1_chipselect                    : out std_logic;                                        -- chipselect
+			motory_s1_address                       : out std_logic_vector(1 downto 0);                     -- address
+			motory_s1_write                         : out std_logic;                                        -- write
+			motory_s1_readdata                      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			motory_s1_writedata                     : out std_logic_vector(31 downto 0);                    -- writedata
+			motory_s1_chipselect                    : out std_logic;                                        -- chipselect
 			PORTA_A_s1_address                      : out std_logic_vector(2 downto 0);                     -- address
 			PORTA_A_s1_write                        : out std_logic;                                        -- write
 			PORTA_A_s1_readdata                     : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
@@ -714,6 +751,26 @@ architecture rtl of sopc_2 is
 	signal mm_interconnect_0_hex_1_s1_writedata                          : std_logic_vector(31 downto 0); -- mm_interconnect_0:hex_1_s1_writedata -> hex_1:writedata
 	signal mm_interconnect_0_sw_s1_readdata                              : std_logic_vector(31 downto 0); -- sw:readdata -> mm_interconnect_0:sw_s1_readdata
 	signal mm_interconnect_0_sw_s1_address                               : std_logic_vector(1 downto 0);  -- mm_interconnect_0:sw_s1_address -> sw:address
+	signal mm_interconnect_0_motorx_s1_chipselect                        : std_logic;                     -- mm_interconnect_0:motorx_s1_chipselect -> motorx:chipselect
+	signal mm_interconnect_0_motorx_s1_readdata                          : std_logic_vector(31 downto 0); -- motorx:readdata -> mm_interconnect_0:motorx_s1_readdata
+	signal mm_interconnect_0_motorx_s1_address                           : std_logic_vector(1 downto 0);  -- mm_interconnect_0:motorx_s1_address -> motorx:address
+	signal mm_interconnect_0_motorx_s1_write                             : std_logic;                     -- mm_interconnect_0:motorx_s1_write -> mm_interconnect_0_motorx_s1_write:in
+	signal mm_interconnect_0_motorx_s1_writedata                         : std_logic_vector(31 downto 0); -- mm_interconnect_0:motorx_s1_writedata -> motorx:writedata
+	signal mm_interconnect_0_motory_s1_chipselect                        : std_logic;                     -- mm_interconnect_0:motory_s1_chipselect -> motory:chipselect
+	signal mm_interconnect_0_motory_s1_readdata                          : std_logic_vector(31 downto 0); -- motory:readdata -> mm_interconnect_0:motory_s1_readdata
+	signal mm_interconnect_0_motory_s1_address                           : std_logic_vector(1 downto 0);  -- mm_interconnect_0:motory_s1_address -> motory:address
+	signal mm_interconnect_0_motory_s1_write                             : std_logic;                     -- mm_interconnect_0:motory_s1_write -> mm_interconnect_0_motory_s1_write:in
+	signal mm_interconnect_0_motory_s1_writedata                         : std_logic_vector(31 downto 0); -- mm_interconnect_0:motory_s1_writedata -> motory:writedata
+	signal mm_interconnect_0_motora_s1_chipselect                        : std_logic;                     -- mm_interconnect_0:motora_s1_chipselect -> motora:chipselect
+	signal mm_interconnect_0_motora_s1_readdata                          : std_logic_vector(31 downto 0); -- motora:readdata -> mm_interconnect_0:motora_s1_readdata
+	signal mm_interconnect_0_motora_s1_address                           : std_logic_vector(1 downto 0);  -- mm_interconnect_0:motora_s1_address -> motora:address
+	signal mm_interconnect_0_motora_s1_write                             : std_logic;                     -- mm_interconnect_0:motora_s1_write -> mm_interconnect_0_motora_s1_write:in
+	signal mm_interconnect_0_motora_s1_writedata                         : std_logic_vector(31 downto 0); -- mm_interconnect_0:motora_s1_writedata -> motora:writedata
+	signal mm_interconnect_0_motorb_s1_chipselect                        : std_logic;                     -- mm_interconnect_0:motorb_s1_chipselect -> motorb:chipselect
+	signal mm_interconnect_0_motorb_s1_readdata                          : std_logic_vector(31 downto 0); -- motorb:readdata -> mm_interconnect_0:motorb_s1_readdata
+	signal mm_interconnect_0_motorb_s1_address                           : std_logic_vector(1 downto 0);  -- mm_interconnect_0:motorb_s1_address -> motorb:address
+	signal mm_interconnect_0_motorb_s1_write                             : std_logic;                     -- mm_interconnect_0:motorb_s1_write -> mm_interconnect_0_motorb_s1_write:in
+	signal mm_interconnect_0_motorb_s1_writedata                         : std_logic_vector(31 downto 0); -- mm_interconnect_0:motorb_s1_writedata -> motorb:writedata
 	signal mm_interconnect_0_spi_spi_control_port_chipselect             : std_logic;                     -- mm_interconnect_0:spi_spi_control_port_chipselect -> spi:spi_select
 	signal mm_interconnect_0_spi_spi_control_port_readdata               : std_logic_vector(15 downto 0); -- spi:data_to_cpu -> mm_interconnect_0:spi_spi_control_port_readdata
 	signal mm_interconnect_0_spi_spi_control_port_address                : std_logic_vector(2 downto 0);  -- mm_interconnect_0:spi_spi_control_port_address -> spi:mem_addr
@@ -734,7 +791,7 @@ architecture rtl of sopc_2 is
 	signal rst_controller_reset_out_reset_req                            : std_logic;                     -- rst_controller:reset_req -> [cpu:reset_req, memoria:reset_req, rst_translator:reset_req_in]
 	signal cpu_debug_reset_request_reset                                 : std_logic;                     -- cpu:debug_reset_request -> rst_controller:reset_in1
 	signal watchdog_timer_resetrequest_reset                             : std_logic;                     -- watchdog_timer:resetrequest -> rst_controller:reset_in2
-	signal rst_controller_001_reset_out_reset                            : std_logic;                     -- rst_controller_001:reset_out -> [adc_1:reset, mm_interconnect_0:adc_1_reset_reset_bridge_in_reset_reset]
+	signal rst_controller_001_reset_out_reset                            : std_logic;                     -- rst_controller_001:reset_out -> [adc_1:reset, mm_interconnect_0:adc_1_reset_reset_bridge_in_reset_reset, rst_controller_001_reset_out_reset:in]
 	signal reset_reset_n_ports_inv                                       : std_logic;                     -- reset_reset_n:inv -> [rst_controller:reset_in0, rst_controller_001:reset_in0]
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read_ports_inv  : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:inv -> jtag_uart:av_read_n
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write_ports_inv : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:inv -> jtag_uart:av_write_n
@@ -754,9 +811,14 @@ architecture rtl of sopc_2 is
 	signal mm_interconnect_0_hex_3_s1_write_ports_inv                    : std_logic;                     -- mm_interconnect_0_hex_3_s1_write:inv -> hex_3:write_n
 	signal mm_interconnect_0_hex_2_s1_write_ports_inv                    : std_logic;                     -- mm_interconnect_0_hex_2_s1_write:inv -> hex_2:write_n
 	signal mm_interconnect_0_hex_1_s1_write_ports_inv                    : std_logic;                     -- mm_interconnect_0_hex_1_s1_write:inv -> hex_1:write_n
+	signal mm_interconnect_0_motorx_s1_write_ports_inv                   : std_logic;                     -- mm_interconnect_0_motorx_s1_write:inv -> motorx:write_n
+	signal mm_interconnect_0_motory_s1_write_ports_inv                   : std_logic;                     -- mm_interconnect_0_motory_s1_write:inv -> motory:write_n
+	signal mm_interconnect_0_motora_s1_write_ports_inv                   : std_logic;                     -- mm_interconnect_0_motora_s1_write:inv -> motora:write_n
+	signal mm_interconnect_0_motorb_s1_write_ports_inv                   : std_logic;                     -- mm_interconnect_0_motorb_s1_write:inv -> motorb:write_n
 	signal mm_interconnect_0_spi_spi_control_port_read_ports_inv         : std_logic;                     -- mm_interconnect_0_spi_spi_control_port_read:inv -> spi:read_n
 	signal mm_interconnect_0_spi_spi_control_port_write_ports_inv        : std_logic;                     -- mm_interconnect_0_spi_spi_control_port_write:inv -> spi:write_n
 	signal rst_controller_reset_out_reset_ports_inv                      : std_logic;                     -- rst_controller_reset_out_reset:inv -> [PORTA_A:reset_n, PORTA_B:reset_n, botao:reset_n, cpu:reset_n, entrada_C:reset_n, hex_0:reset_n, hex_1:reset_n, hex_2:reset_n, hex_3:reset_n, hex_4:reset_n, hex_5:reset_n, jtag_uart:rst_n, saida_C:reset_n, spi:reset_n, sw:reset_n, sys_clk_timer:reset_n, sysid:reset_n, timer_geral:reset_n, timestamp_timer:reset_n, uart:reset_n, watchdog_timer:reset_n]
+	signal rst_controller_001_reset_out_reset_ports_inv                  : std_logic;                     -- rst_controller_001_reset_out_reset:inv -> [motora:reset_n, motorb:reset_n, motorx:reset_n, motory:reset_n]
 
 begin
 
@@ -962,6 +1024,54 @@ begin
 			freeze     => '0'                                      -- (terminated)
 		);
 
+	motora : component sopc_2_motora
+		port map (
+			clk        => clk_clk,                                      --                 clk.clk
+			reset_n    => rst_controller_001_reset_out_reset_ports_inv, --               reset.reset_n
+			address    => mm_interconnect_0_motora_s1_address,          --                  s1.address
+			write_n    => mm_interconnect_0_motora_s1_write_ports_inv,  --                    .write_n
+			writedata  => mm_interconnect_0_motora_s1_writedata,        --                    .writedata
+			chipselect => mm_interconnect_0_motora_s1_chipselect,       --                    .chipselect
+			readdata   => mm_interconnect_0_motora_s1_readdata,         --                    .readdata
+			out_port   => motora_export                                 -- external_connection.export
+		);
+
+	motorb : component sopc_2_motora
+		port map (
+			clk        => clk_clk,                                      --                 clk.clk
+			reset_n    => rst_controller_001_reset_out_reset_ports_inv, --               reset.reset_n
+			address    => mm_interconnect_0_motorb_s1_address,          --                  s1.address
+			write_n    => mm_interconnect_0_motorb_s1_write_ports_inv,  --                    .write_n
+			writedata  => mm_interconnect_0_motorb_s1_writedata,        --                    .writedata
+			chipselect => mm_interconnect_0_motorb_s1_chipselect,       --                    .chipselect
+			readdata   => mm_interconnect_0_motorb_s1_readdata,         --                    .readdata
+			out_port   => motorb_export                                 -- external_connection.export
+		);
+
+	motorx : component sopc_2_motora
+		port map (
+			clk        => clk_clk,                                      --                 clk.clk
+			reset_n    => rst_controller_001_reset_out_reset_ports_inv, --               reset.reset_n
+			address    => mm_interconnect_0_motorx_s1_address,          --                  s1.address
+			write_n    => mm_interconnect_0_motorx_s1_write_ports_inv,  --                    .write_n
+			writedata  => mm_interconnect_0_motorx_s1_writedata,        --                    .writedata
+			chipselect => mm_interconnect_0_motorx_s1_chipselect,       --                    .chipselect
+			readdata   => mm_interconnect_0_motorx_s1_readdata,         --                    .readdata
+			out_port   => motorx_export                                 -- external_connection.export
+		);
+
+	motory : component sopc_2_motora
+		port map (
+			clk        => clk_clk,                                      --                 clk.clk
+			reset_n    => rst_controller_001_reset_out_reset_ports_inv, --               reset.reset_n
+			address    => mm_interconnect_0_motory_s1_address,          --                  s1.address
+			write_n    => mm_interconnect_0_motory_s1_write_ports_inv,  --                    .write_n
+			writedata  => mm_interconnect_0_motory_s1_writedata,        --                    .writedata
+			chipselect => mm_interconnect_0_motory_s1_chipselect,       --                    .chipselect
+			readdata   => mm_interconnect_0_motory_s1_readdata,         --                    .readdata
+			out_port   => motory_export                                 -- external_connection.export
+		);
+
 	saida_c : component sopc_2_saida_C
 		port map (
 			clk        => clk_clk,                                      --                 clk.clk
@@ -1156,6 +1266,26 @@ begin
 			memoria_s1_byteenable                   => mm_interconnect_0_memoria_s1_byteenable,                   --                                  .byteenable
 			memoria_s1_chipselect                   => mm_interconnect_0_memoria_s1_chipselect,                   --                                  .chipselect
 			memoria_s1_clken                        => mm_interconnect_0_memoria_s1_clken,                        --                                  .clken
+			motora_s1_address                       => mm_interconnect_0_motora_s1_address,                       --                         motora_s1.address
+			motora_s1_write                         => mm_interconnect_0_motora_s1_write,                         --                                  .write
+			motora_s1_readdata                      => mm_interconnect_0_motora_s1_readdata,                      --                                  .readdata
+			motora_s1_writedata                     => mm_interconnect_0_motora_s1_writedata,                     --                                  .writedata
+			motora_s1_chipselect                    => mm_interconnect_0_motora_s1_chipselect,                    --                                  .chipselect
+			motorb_s1_address                       => mm_interconnect_0_motorb_s1_address,                       --                         motorb_s1.address
+			motorb_s1_write                         => mm_interconnect_0_motorb_s1_write,                         --                                  .write
+			motorb_s1_readdata                      => mm_interconnect_0_motorb_s1_readdata,                      --                                  .readdata
+			motorb_s1_writedata                     => mm_interconnect_0_motorb_s1_writedata,                     --                                  .writedata
+			motorb_s1_chipselect                    => mm_interconnect_0_motorb_s1_chipselect,                    --                                  .chipselect
+			motorx_s1_address                       => mm_interconnect_0_motorx_s1_address,                       --                         motorx_s1.address
+			motorx_s1_write                         => mm_interconnect_0_motorx_s1_write,                         --                                  .write
+			motorx_s1_readdata                      => mm_interconnect_0_motorx_s1_readdata,                      --                                  .readdata
+			motorx_s1_writedata                     => mm_interconnect_0_motorx_s1_writedata,                     --                                  .writedata
+			motorx_s1_chipselect                    => mm_interconnect_0_motorx_s1_chipselect,                    --                                  .chipselect
+			motory_s1_address                       => mm_interconnect_0_motory_s1_address,                       --                         motory_s1.address
+			motory_s1_write                         => mm_interconnect_0_motory_s1_write,                         --                                  .write
+			motory_s1_readdata                      => mm_interconnect_0_motory_s1_readdata,                      --                                  .readdata
+			motory_s1_writedata                     => mm_interconnect_0_motory_s1_writedata,                     --                                  .writedata
+			motory_s1_chipselect                    => mm_interconnect_0_motory_s1_chipselect,                    --                                  .chipselect
 			PORTA_A_s1_address                      => mm_interconnect_0_porta_a_s1_address,                      --                        PORTA_A_s1.address
 			PORTA_A_s1_write                        => mm_interconnect_0_porta_a_s1_write,                        --                                  .write
 			PORTA_A_s1_readdata                     => mm_interconnect_0_porta_a_s1_readdata,                     --                                  .readdata
@@ -1394,10 +1524,20 @@ begin
 
 	mm_interconnect_0_hex_1_s1_write_ports_inv <= not mm_interconnect_0_hex_1_s1_write;
 
+	mm_interconnect_0_motorx_s1_write_ports_inv <= not mm_interconnect_0_motorx_s1_write;
+
+	mm_interconnect_0_motory_s1_write_ports_inv <= not mm_interconnect_0_motory_s1_write;
+
+	mm_interconnect_0_motora_s1_write_ports_inv <= not mm_interconnect_0_motora_s1_write;
+
+	mm_interconnect_0_motorb_s1_write_ports_inv <= not mm_interconnect_0_motorb_s1_write;
+
 	mm_interconnect_0_spi_spi_control_port_read_ports_inv <= not mm_interconnect_0_spi_spi_control_port_read;
 
 	mm_interconnect_0_spi_spi_control_port_write_ports_inv <= not mm_interconnect_0_spi_spi_control_port_write;
 
 	rst_controller_reset_out_reset_ports_inv <= not rst_controller_reset_out_reset;
+
+	rst_controller_001_reset_out_reset_ports_inv <= not rst_controller_001_reset_out_reset;
 
 end architecture rtl; -- of sopc_2

@@ -8,6 +8,10 @@
 		.hex3_export      (<connected-to-hex3_export>),      //      hex3.export
 		.hex5_export      (<connected-to-hex5_export>),      //      hex5.export
 		.hex_4_export     (<connected-to-hex_4_export>),     //     hex_4.export
+		.motora_export    (<connected-to-motora_export>),    //    motora.export
+		.motorb_export    (<connected-to-motorb_export>),    //    motorb.export
+		.motorx_export    (<connected-to-motorx_export>),    //    motorx.export
+		.motory_export    (<connected-to-motory_export>),    //    motory.export
 		.porta_a_export   (<connected-to-porta_a_export>),   //   porta_a.export
 		.porta_b_export   (<connected-to-porta_b_export>),   //   porta_b.export
 		.reset_reset_n    (<connected-to-reset_reset_n>),    //     reset.reset_n
