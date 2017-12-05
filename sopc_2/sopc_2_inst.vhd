@@ -23,8 +23,8 @@
 			spi_SS_n         : out   std_logic_vector(1 downto 0);                     -- SS_n
 			sw_export        : in    std_logic_vector(9 downto 0)  := (others => 'X'); -- export
 			to_export        : out   std_logic;                                        -- export
-			uart_rxd         : in    std_logic                     := 'X';             -- rxd
-			uart_txd         : out   std_logic                                         -- txd
+			uart_1_RXD       : in    std_logic                     := 'X';             -- RXD
+			uart_1_TXD       : out   std_logic                                         -- TXD
 		);
 	end component sopc_2;
 
@@ -53,7 +53,7 @@
 			spi_SS_n         => CONNECTED_TO_spi_SS_n,         --          .SS_n
 			sw_export        => CONNECTED_TO_sw_export,        --        sw.export
 			to_export        => CONNECTED_TO_to_export,        --        to.export
-			uart_rxd         => CONNECTED_TO_uart_rxd,         --      uart.rxd
-			uart_txd         => CONNECTED_TO_uart_txd          --          .txd
+			uart_1_RXD       => CONNECTED_TO_uart_1_RXD,       --    uart_1.RXD
+			uart_1_TXD       => CONNECTED_TO_uart_1_TXD        --          .TXD
 		);
 

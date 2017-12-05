@@ -1,0 +1,13 @@
+12:02:15 **** Incremental Build of configuration Nios II for project implem_UART ****
+make all 
+Info: Building ../Ixtopor_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor_bsp//HAL/inc -I../Ixtopor_bsp/ -I../Ixtopor_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c:18:36: fatal error: altera_up_avalon_rs232.h: No such file or directory
+compilation terminated.
+make: *** [obj/default/hello_world.o] Error 1
+
+12:02:16 Build Finished (took 1s.44ms)
+

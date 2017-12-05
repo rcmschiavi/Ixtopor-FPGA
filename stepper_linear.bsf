@@ -94,6 +94,13 @@ agreement for further details.
 		(text "end_stop" (rect 143 59 179 71)(font "Arial" ))
 		(line (pt 200 64)(pt 184 64)(line_width 1))
 	)
+	(port
+		(pt 200 80)
+		(output)
+		(text "busy" (rect 0 0 20 12)(font "Arial" ))
+		(text "busy" (rect 159 75 179 87)(font "Arial" ))
+		(line (pt 200 80)(pt 184 80)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 184 160)(line_width 1))
 	)

@@ -69,8 +69,8 @@ agreement for further details.
 	(port
 		(pt 0 920)
 		(input)
-		(text "uart_rxd" (rect 0 0 34 12)(font "Arial" (font_size 8)))
-		(text "uart_rxd" (rect 4 909 52 920)(font "Arial" (font_size 8)))
+		(text "uart_1_RXD" (rect 0 0 51 12)(font "Arial" (font_size 8)))
+		(text "uart_1_RXD" (rect 4 909 64 920)(font "Arial" (font_size 8)))
 		(line (pt 0 920)(pt 128 920)(line_width 1))
 	)
 	(port
@@ -181,8 +181,8 @@ agreement for further details.
 	(port
 		(pt 0 936)
 		(output)
-		(text "uart_txd" (rect 0 0 33 12)(font "Arial" (font_size 8)))
-		(text "uart_txd" (rect 4 925 52 936)(font "Arial" (font_size 8)))
+		(text "uart_1_TXD" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "uart_1_TXD" (rect 4 925 64 936)(font "Arial" (font_size 8)))
 		(line (pt 0 936)(pt 128 936)(line_width 1))
 	)
 	(port
@@ -243,9 +243,9 @@ agreement for further details.
 		(text "export" (rect 133 835 302 1680)(font "Arial" (color 0 0 0)))
 		(text "to" (rect 118 851 248 1715)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 133 875 302 1760)(font "Arial" (color 0 0 0)))
-		(text "uart" (rect 106 891 236 1795)(font "Arial" (color 128 0 0)(font_size 9)))
-		(text "rxd" (rect 133 915 284 1840)(font "Arial" (color 0 0 0)))
-		(text "txd" (rect 133 931 284 1872)(font "Arial" (color 0 0 0)))
+		(text "uart_1" (rect 93 891 222 1795)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "RXD" (rect 133 915 284 1840)(font "Arial" (color 0 0 0)))
+		(text "TXD" (rect 133 931 284 1872)(font "Arial" (color 0 0 0)))
 		(text " sopc_2 " (rect 286 952 620 1914)(font "Arial" ))
 		(line (pt 128 32)(pt 192 32)(line_width 1))
 		(line (pt 192 32)(pt 192 952)(line_width 1))

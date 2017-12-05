@@ -23,8 +23,8 @@ module sopc_2 (
 	spi_SS_n,
 	sw_export,
 	to_export,
-	uart_rxd,
-	uart_txd);	
+	uart_1_RXD,
+	uart_1_TXD);	
 
 	input		botao_export;
 	input		clk_clk;
@@ -49,6 +49,6 @@ module sopc_2 (
 	output	[1:0]	spi_SS_n;
 	input	[9:0]	sw_export;
 	output		to_export;
-	input		uart_rxd;
-	output		uart_txd;
+	input		uart_1_RXD;
+	output		uart_1_TXD;
 endmodule

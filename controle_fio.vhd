@@ -1,13 +1,19 @@
 -- PWM code of sequencial logic for fpga.
 
--- This code applies for chips working with 50MHz; 
--- If you work with another frequency, change the constante prescaler according the equation above
---	clk/(255*frequency)
 
 -- Código de geração de PWM aplicado ao controle de temperatura de um fio de cromo níquel aquecido por
 -- corrente elétrica eficaz proporcional proporcional a tensão eficaz aplicada ao fio.
 
+
+
+-- This code applies for chips working with 50MHz; 
+-- If you will work with another frequency, change the constante prescaler according the equation above
+--	clk/(255*frequency)
+
+-- #####Documentação em inglês pois coloquei no github e fiquei com preguiça de traduzir, mas fiz tudo.
+
 -- Autor: Rodolfo Cavour Moretti Schiavi
+
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
@@ -27,7 +33,7 @@ architecture modulation of PWM is
 BEGIN
 		PROCESS (clk) 
 		
-		constant prescaler: integer range 0 to 4095 := 3334; -- Clock divider for reach  1kHz, change this value 
+		constant prescaler: integer range 0 to 4095 := 3334; -- Clock divider to reach  1kHz, change this value 
 																			  -- with the following equation: clk/(15*frequency)
 		variable t: integer range 0 to 32768 := 0;	-- Time counter
 		variable t_mod: integer range 0 to 15;	-- Time counter for the duty cycle

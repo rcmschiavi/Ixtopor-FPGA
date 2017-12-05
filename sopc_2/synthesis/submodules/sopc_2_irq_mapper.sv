@@ -22,7 +22,7 @@
 // Parameters
 //   NUM_RCVRS        : 9
 //   SENDER_IRW_WIDTH : 32
-//   IRQ_MAP          : 0:0,1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8
+//   IRQ_MAP          : 0:9,1:0,2:1,3:3,4:4,5:5,6:6,7:7,8:8
 //
 // -------------------------------------------------------
 
@@ -59,9 +59,9 @@ module sopc_2_irq_mapper
     always @* begin
 	sender_irq = 0;
 
-        sender_irq[0] = receiver0_irq;
-        sender_irq[1] = receiver1_irq;
-        sender_irq[2] = receiver2_irq;
+        sender_irq[9] = receiver0_irq;
+        sender_irq[0] = receiver1_irq;
+        sender_irq[1] = receiver2_irq;
         sender_irq[3] = receiver3_irq;
         sender_irq[4] = receiver4_irq;
         sender_irq[5] = receiver5_irq;

@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sun Dec 03 23:44:08 2017
+Analysis & Synthesis Status : Successful - Mon Dec 04 22:11:23 2017
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : sistema_basico2
 Top-level Entity Name : sistema_basico2
 Family : MAX 10
-Total logic elements : 5,644
-    Total combinational functions : 4,801
-    Dedicated logic registers : 2,678
-Total registers : 2678
+Total logic elements : 5,634
+    Total combinational functions : 4,790
+    Dedicated logic registers : 2,680
+Total registers : 2680
 Total pins : 112
 Total virtual pins : 0
 Total memory bits : 332,032

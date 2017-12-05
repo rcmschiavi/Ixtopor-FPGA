@@ -22,7 +22,7 @@
 		.spi_SS_n         (<connected-to-spi_SS_n>),         //          .SS_n
 		.sw_export        (<connected-to-sw_export>),        //        sw.export
 		.to_export        (<connected-to-to_export>),        //        to.export
-		.uart_rxd         (<connected-to-uart_rxd>),         //      uart.rxd
-		.uart_txd         (<connected-to-uart_txd>)          //          .txd
+		.uart_1_RXD       (<connected-to-uart_1_RXD>),       //    uart_1.RXD
+		.uart_1_TXD       (<connected-to-uart_1_TXD>)        //          .TXD
 	);
 

@@ -14,7 +14,8 @@
    <frequency preferredWidth="529" />
   </columns>
  </clocktable>
- <library expandedCategories="Library,Project" />
+ <library
+   expandedCategories="Library/University Program/Communications,Library/University Program,Library/Interface Protocols,Library/Interface Protocols/Serial,Library,Project" />
  <window width="1366" height="728" x="0" y="0" />
- <generation synthesis="VHDL" block_symbol_file="1" />
+ <generation synthesis="VHDL" block_symbol_file="1" path="_PROJECT_NAME_" />
 </preferences>
