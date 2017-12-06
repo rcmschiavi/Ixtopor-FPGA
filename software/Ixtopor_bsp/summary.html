@@ -22,10 +22,10 @@
 <td width="20%" bgcolor="#77BBFF">BSP Version:</td><td>default</td>
 </tr>
 <tr mode="wrap">
-<td width="20%" bgcolor="#77BBFF">BSP Generated On:</td><td>05/12/2017 11:34:15</td>
+<td width="20%" bgcolor="#77BBFF">BSP Generated On:</td><td>Dec 5, 2017 4:19:29 PM</td>
 </tr>
 <tr mode="wrap">
-<td width="20%" bgcolor="#77BBFF">BSP Generated Timestamp:</td><td>1512480855204</td>
+<td width="20%" bgcolor="#77BBFF">BSP Generated Timestamp:</td><td>1512497969134</td>
 </tr>
 <tr mode="wrap">
 <td width="20%" bgcolor="#77BBFF">BSP Generated Location:</td><td>C:\github\Ixtopor-FPGA\software\Ixtopor_bsp</td>
@@ -95,9 +95,6 @@
 <td>PORTA_B</td><td>0x000210C0 - 0x000210DF</td><td>32</td><td class="listing">&nbsp;</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
-<td>uart</td><td>0x000210A0 - 0x000210BF</td><td>32</td><td class="listing">printable</td>
-</tr>
-<tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
 <td>sys_clk_timer</td><td>0x00021080 - 0x0002109F</td><td>32</td><td class="listing">timer</td>
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
@@ -114,6 +111,9 @@
 </tr>
 <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
 <td>memoria</td><td>0x00010000 - 0x00019C3F</td><td>40000</td><td class="listing">memory</td>
+</tr>
+<tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+<td>uart_rs232</td><td>0x00000000 - 0x00000007</td><td>8</td><td class="listing">&nbsp;</td>
 </tr>
 </table>
 <br>
@@ -184,60 +184,6 @@
 </tr>
 <tr>
 <td width="20%">Identifier:</td><td>ALTERA_AVALON_JTAG_UART_SMALL</td>
-</tr>
-<tr>
-<td width="20%">Default Value:</td><td>false</td>
-</tr>
-<tr>
-<td width="20%">Value:</td><td>false</td>
-</tr>
-<tr>
-<td width="20%">Type:</td><td>BooleanDefineOnly</td>
-</tr>
-<tr mode="wrap">
-<td width="20%">Destination:</td><td>public_mk_define</td>
-</tr>
-<tr mode="wrap">
-<td width="20%">Description:</td><td>Small-footprint (polled mode) driver</td>
-</tr>
-<tr mode="wrap">
-<td width="20%">Restrictions:</td><td>none</td>
-</tr>
-</table>
-<br>
-<table border="1" bgcolor="#FFFFCC" width="60%">
-<tr bgcolor="#77BBFF">
-<td align="left" width="15%">Setting Name:</td><td align="left">altera_avalon_uart_driver.enable_ioctl</td>
-</tr>
-<tr>
-<td width="20%">Identifier:</td><td>ALTERA_AVALON_UART_USE_IOCTL</td>
-</tr>
-<tr>
-<td width="20%">Default Value:</td><td>false</td>
-</tr>
-<tr>
-<td width="20%">Value:</td><td>false</td>
-</tr>
-<tr>
-<td width="20%">Type:</td><td>BooleanDefineOnly</td>
-</tr>
-<tr mode="wrap">
-<td width="20%">Destination:</td><td>public_mk_define</td>
-</tr>
-<tr mode="wrap">
-<td width="20%">Description:</td><td>Enable driver ioctl() support. This feature is not compatible with the 'small' driver; ioctl() support will not be compiled if either the UART 'enable_small_driver' or HAL 'enable_reduced_device_drivers' settings are enabled.</td>
-</tr>
-<tr mode="wrap">
-<td width="20%">Restrictions:</td><td>none</td>
-</tr>
-</table>
-<br>
-<table border="1" bgcolor="#FFFFCC" width="60%">
-<tr bgcolor="#77BBFF">
-<td align="left" width="15%">Setting Name:</td><td align="left">altera_avalon_uart_driver.enable_small_driver</td>
-</tr>
-<tr>
-<td width="20%">Identifier:</td><td>ALTERA_AVALON_UART_SMALL</td>
 </tr>
 <tr>
 <td width="20%">Default Value:</td><td>false</td>

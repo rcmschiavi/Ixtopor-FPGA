@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>05/12/2017 11:34:15</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1512480855204</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Dec 5, 2017 4:19:29 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1512497969134</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\github\Ixtopor-FPGA\software\Ixtopor_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\sopc_2.sopcinfo</SopcDesignFile>
@@ -875,30 +875,6 @@
                 <Group>none</Group>
         </Setting>
         <Setting>
-                <SettingName>altera_avalon_uart_driver.enable_small_driver</SettingName>
-                <Identifier>ALTERA_AVALON_UART_SMALL</Identifier>
-                <Type>BooleanDefineOnly</Type>
-                <Value>false</Value>
-                <DefaultValue>false</DefaultValue>
-                <DestinationFile>public_mk_define</DestinationFile>
-                <Description>Small-footprint (polled mode) driver</Description>
-                <Restrictions>none</Restrictions>
-                <Enabled>false</Enabled>
-                <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        </Setting>
-        <Setting>
-                <SettingName>altera_avalon_uart_driver.enable_ioctl</SettingName>
-                <Identifier>ALTERA_AVALON_UART_USE_IOCTL</Identifier>
-                <Type>BooleanDefineOnly</Type>
-                <Value>false</Value>
-                <DefaultValue>false</DefaultValue>
-                <DestinationFile>public_mk_define</DestinationFile>
-                <Description>Enable driver ioctl() support. This feature is not compatible with the 'small' driver; ioctl() support will not be compiled if either the UART 'enable_small_driver' or HAL 'enable_reduced_device_drivers' settings are enabled.</Description>
-                <Restrictions>none</Restrictions>
-                <Enabled>false</Enabled>
-                <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        </Setting>
-        <Setting>
                 <SettingName>altera_avalon_jtag_uart_driver.enable_small_driver</SettingName>
                 <Identifier>ALTERA_AVALON_JTAG_UART_SMALL</Identifier>
                 <Type>BooleanDefineOnly</Type>
@@ -922,6 +898,12 @@
                 <Enabled>false</Enabled>
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
+        <MemoryMap>
+                <slaveDescriptor>uart_rs232</slaveDescriptor>
+                <addressRange>0x00000000 - 0x00000007</addressRange>
+                <addressSpan>8</addressSpan>
+                <attributes/>
+        </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>memoria</slaveDescriptor>
                 <addressRange>0x00010000 - 0x00019C3F</addressRange>
@@ -957,12 +939,6 @@
                 <addressRange>0x00021080 - 0x0002109F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>uart</slaveDescriptor>
-                <addressRange>0x000210A0 - 0x000210BF</addressRange>
-                <addressSpan>32</addressSpan>
-                <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>PORTA_B</slaveDescriptor>

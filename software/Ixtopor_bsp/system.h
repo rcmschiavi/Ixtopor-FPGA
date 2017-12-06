@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'sopc_2'
  * SOPC Builder design path: ../../sopc_2.sopcinfo
  *
- * Generated: Mon Dec 04 21:52:24 BRST 2017
+ * Generated: Tue Dec 05 15:35:30 BRST 2017
  */
 
 /*
@@ -139,9 +139,9 @@
 #define __ALTERA_AVALON_SPI
 #define __ALTERA_AVALON_SYSID_QSYS
 #define __ALTERA_AVALON_TIMER
-#define __ALTERA_AVALON_UART
 #define __ALTERA_NIOS2_GEN2
 #define __ALTERA_UP_AVALON_ADC
+#define __ALTERA_UP_AVALON_RS232
 
 
 /*
@@ -204,8 +204,8 @@
  */
 
 #define ALT_DEVICE_FAMILY "MAX 10"
-#define ALT_ENHANCED_INTERRUPT_API_PRESENT
 #define ALT_IRQ_BASE NULL
+#define ALT_LEGACY_INTERRUPT_API_PRESENT
 #define ALT_LOG_PORT "/dev/null"
 #define ALT_LOG_PORT_BASE 0x0
 #define ALT_LOG_PORT_DEV null
@@ -753,7 +753,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1512350717
+#define SYSID_TIMESTAMP 1512482898
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -810,28 +810,17 @@
 
 
 /*
- * uart configuration
+ * uart_rs232 configuration
  *
  */
 
-#define ALT_MODULE_CLASS_uart altera_avalon_uart
-#define UART_BASE 0x210a0
-#define UART_BAUD 9600
-#define UART_DATA_BITS 8
-#define UART_FIXED_BAUD 1
-#define UART_FREQ 50000000
-#define UART_IRQ 2
-#define UART_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define UART_NAME "/dev/uart"
-#define UART_PARITY 'N'
-#define UART_SIM_CHAR_STREAM ""
-#define UART_SIM_TRUE_BAUD 0
-#define UART_SPAN 32
-#define UART_STOP_BITS 1
-#define UART_SYNC_REG_DEPTH 2
-#define UART_TYPE "altera_avalon_uart"
-#define UART_USE_CTS_RTS 0
-#define UART_USE_EOP_REGISTER 0
+#define ALT_MODULE_CLASS_uart_rs232 altera_up_avalon_rs232
+#define UART_RS232_BASE 0x0
+#define UART_RS232_IRQ 9
+#define UART_RS232_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define UART_RS232_NAME "/dev/uart_rs232"
+#define UART_RS232_SPAN 8
+#define UART_RS232_TYPE "altera_up_avalon_rs232"
 
 
 /*

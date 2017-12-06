@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
 newApplicationWizardPage.defaultLocation=C\:\\intelFPGA_lite\\_Projetos_NIOSII\\SistBasi2_ixtopor\\software\\teste_timestamp
-newBspWizardPage.defaultLocation=C\:\\intelFPGA_lite\\_Projetos_NIOSII\\SistBasi2_ixtopor\\software\\_bspGeral
-newBspWizardPage.sopcinfoFile=C\:\\intelFPGA_lite\\_Projetos_NIOSII\\SistBasi2_ixtopor\\sopc_2.sopcinfo
-newSoftwareExampleWizardPage.defaultLocation=C\:\\github\\Ixtopor-FPGA\\software\\implem_UART
+newBspWizardPage.defaultLocation=C\:\\github\\Ixtopor-FPGA\\software\\bsp_10k
+newBspWizardPage.sopcinfoFile=C\:\\github\\Ixtopor-FPGA\\sopc_2.sopcinfo
+newSoftwareExampleWizardPage.defaultLocation=C\:\\github\\Ixtopor-FPGA\\software\\erro
 newSoftwareExampleWizardPage.sopcinfoFile=C\:\\github\\Ixtopor-FPGA\\sopc_2.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\github\\Ixtopor-FPGA\\software\\implem_UART_bsp
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\github\\Ixtopor-FPGA\\software\\erro_bsp

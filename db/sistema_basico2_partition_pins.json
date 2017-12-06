@@ -436,19 +436,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw[9]",
-					"strict" : false
-				},
-				{
 					"name" : "sw[8]",
 					"strict" : false
 				},
 				{
-					"name" : "miso",
+					"name" : "sw[9]",
 					"strict" : false
 				},
 				{
 					"name" : "rxd",
+					"strict" : false
+				},
+				{
+					"name" : "miso",
 					"strict" : false
 				},
 				{
