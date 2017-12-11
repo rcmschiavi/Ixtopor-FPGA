@@ -82,5 +82,6 @@ begin
 	dir<=signal_dir; 
 	clk_step<=state;
 	busy<=sig_busy;
+	end_stop<=signal_end_stop;
 
 end Behavioral;

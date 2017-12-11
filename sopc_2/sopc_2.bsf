@@ -246,7 +246,7 @@ agreement for further details.
 		(text "uart_1" (rect 93 891 222 1795)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "RXD" (rect 133 915 284 1840)(font "Arial" (color 0 0 0)))
 		(text "TXD" (rect 133 931 284 1872)(font "Arial" (color 0 0 0)))
-		(text " system " (rect 285 952 618 1914)(font "Arial" ))
+		(text " sopc_2 " (rect 286 952 620 1914)(font "Arial" ))
 		(line (pt 128 32)(pt 192 32)(line_width 1))
 		(line (pt 192 32)(pt 192 952)(line_width 1))
 		(line (pt 128 952)(pt 192 952)(line_width 1))

@@ -1,0 +1,60 @@
+
+
+#include "sys/alt_stdio.h"
+#include "altera_up_avalon_rs232.h"
+#include "system.h"
+#include "unistd.h"
+
+
+
+#define delay(atraso)	usleep(atraso*1000)
+
+alt_up_rs232_dev *rs232; // Variável que inicia o uart
+
+int main()
+{
+	rs232 = alt_up_rs232_open_dev("/dev/uart_rs232");
+	alt_u8 *dado;
+	alt_u8 *parity_error;
+	char *s;
+	alt_u8 valor = 0b00001110;
+	int i=8;
+	printf("Programa iniciado!\n");
+	delay(100);
+	send_data(valor, rs232);
+	delay(3000);
+	alt_printf(valor);
+	unsigned num_dados = alt_up_rs232_get_used_space_in_read_FIFO(rs232);
+	delay(100);
+	//printf("num-dados: %u\n",num_dados);
+	while(1){
+		//Captura o dado em um vetor
+		if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+			//alt_printf("Ótimo, dado: %alt_u8 \n", (alt_u8*)data);
+			int **teste = &dado;
+			alt_printf("oo %d\n", **teste);
+			if(*dado==118){
+				alt_printf("Blz");
+			}
+		    //alt_printf("%d\n",i);
+			i=i+1;
+		}
+		else{
+			//alt_printf("merda\n");
+		}
+
+	}
+	return 0;
+}
+
+void send_data(alt_u8 data, alt_up_rs232_dev *rs232){
+
+	//Envia o dado e verifica se teve exito, não parece funcionar a verificalçao,
+	//mas o dado é enviado
+	if(!alt_up_rs232_write_data(rs232, data )){
+		  alt_printf("Dado enviado.\n");
+		}
+		else{
+		  alt_printf("Algo deu errado.\n");
+		}
+}

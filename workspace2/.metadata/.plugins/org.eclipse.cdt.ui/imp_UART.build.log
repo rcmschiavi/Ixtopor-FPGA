@@ -1,0 +1,9 @@
+05:32:20 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+[imp_UART build complete]
+
+05:32:21 Build Finished (took 981ms)
+

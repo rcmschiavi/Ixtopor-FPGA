@@ -7,20 +7,20 @@ preplace inst sopc_2.entrada_C -pg 1 -lvl 4 -y 1560
 preplace inst sopc_2.motory -pg 1 -lvl 3 -y 430
 preplace inst sopc_2.hex_0 -pg 1 -lvl 3 -y 230
 preplace inst sopc_2.cpu -pg 1 -lvl 2 -y 720
-preplace inst sopc_2.hex_1 -pg 1 -lvl 3 -y 950
+preplace inst sopc_2.hex_1 -pg 1 -lvl 3 -y 930
 preplace inst sopc_2.cpu.clock_bridge -pg 1
 preplace inst sopc_2.timer_geral -pg 1 -lvl 4 -y 1030
 preplace inst sopc_2.sys_clk_timer -pg 1 -lvl 4 -y 440
 preplace inst sopc_2.motora -pg 1 -lvl 3 -y 30
-preplace inst sopc_2.hex_2 -pg 1 -lvl 3 -y 1050
-preplace inst sopc_2.botao -pg 1 -lvl 3 -y 540
+preplace inst sopc_2.hex_2 -pg 1 -lvl 3 -y 1090
+preplace inst sopc_2.botao -pg 1 -lvl 3 -y 530
 preplace inst sopc_2.adc_1 -pg 1 -lvl 3 -y 1640
 preplace inst sopc_2.timestamp_timer -pg 1 -lvl 4 -y 930
 preplace inst sopc_2.sw -pg 1 -lvl 3 -y 1450
 preplace inst sopc_2.motorb -pg 1 -lvl 3 -y 130
 preplace inst sopc_2.jtag_uart -pg 1 -lvl 4 -y 260
-preplace inst sopc_2.hex_3 -pg 1 -lvl 3 -y 1170
-preplace inst sopc_2.uart_rs232 -pg 1 -lvl 3 -y 680
+preplace inst sopc_2.hex_3 -pg 1 -lvl 3 -y 1210
+preplace inst sopc_2.uart_rs232 -pg 1 -lvl 3 -y 670
 preplace inst sopc_2.hex_4 -pg 1 -lvl 3 -y 1720
 preplace inst sopc_2.sysid -pg 1 -lvl 4 -y 540
 preplace inst sopc_2.saida_C -pg 1 -lvl 4 -y 1410
@@ -28,34 +28,34 @@ preplace inst sopc_2.hex_5 -pg 1 -lvl 3 -y 1310
 preplace inst sopc_2.cpu.cpu -pg 1
 preplace inst sopc_2.PORTA_A -pg 1 -lvl 4 -y 1280
 preplace inst sopc_2.PORTA_B -pg 1 -lvl 4 -y 630
-preplace inst sopc_2.watchdog_timer -pg 1 -lvl 3 -y 800
+preplace inst sopc_2.watchdog_timer -pg 1 -lvl 3 -y 790
 preplace inst sopc_2.spi -pg 1 -lvl 4 -y 810
 preplace inst sopc_2.memoria -pg 1 -lvl 4 -y 360
 preplace inst sopc_2.cpu.reset_bridge -pg 1
 preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)hex_5.external_connection,(SLAVE)sopc_2.hex5) 1 0 3 NJ 1340 NJ 1340 NJ
-preplace netloc INTERCONNECT<net_container>sopc_2</net_container>(SLAVE)motorx.reset,(SLAVE)hex_4.reset,(SLAVE)hex_5.reset,(SLAVE)watchdog_timer.reset,(SLAVE)timestamp_timer.reset,(SLAVE)sw.reset,(SLAVE)sysid.reset,(SLAVE)motorb.reset,(SLAVE)adc_1.reset,(SLAVE)botao.reset,(MASTER)clk.clk_reset,(SLAVE)PORTA_A.reset,(SLAVE)saida_C.reset,(SLAVE)jtag_uart.reset,(SLAVE)timer_geral.reset,(SLAVE)hex_2.reset,(SLAVE)memoria.reset1,(SLAVE)hex_0.reset,(MASTER)watchdog_timer.resetrequest,(SLAVE)cpu.reset,(SLAVE)entrada_C.reset,(SLAVE)hex_3.reset,(SLAVE)PORTA_B.reset,(SLAVE)uart_rs232.reset,(SLAVE)spi.reset,(SLAVE)motora.reset,(MASTER)cpu.debug_reset_request,(SLAVE)motory.reset,(SLAVE)sys_clk_timer.reset,(SLAVE)hex_1.reset) 1 1 3 300 860 700 1600 980
-preplace netloc INTERCONNECT<net_container>sopc_2</net_container>(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)hex_2.s1,(SLAVE)uart_rs232.avalon_rs232_slave,(SLAVE)sys_clk_timer.s1,(SLAVE)hex_5.s1,(SLAVE)watchdog_timer.s1,(SLAVE)hex_1.s1,(SLAVE)memoria.s1,(SLAVE)botao.s1,(SLAVE)saida_C.s1,(SLAVE)spi.spi_control_port,(SLAVE)hex_4.s1,(SLAVE)PORTA_A.s1,(SLAVE)sw.s1,(SLAVE)timer_geral.s1,(SLAVE)PORTA_B.s1,(MASTER)cpu.data_master,(SLAVE)sysid.control_slave,(SLAVE)motorx.s1,(SLAVE)motorb.s1,(MASTER)cpu.instruction_master,(SLAVE)adc_1.adc_slave,(SLAVE)motora.s1,(SLAVE)hex_0.s1,(SLAVE)motory.s1,(SLAVE)timestamp_timer.s1,(SLAVE)cpu.debug_mem_slave,(SLAVE)entrada_C.s1,(SLAVE)hex_3.s1) 1 1 3 300 680 740 1580 1020
 preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.sw,(SLAVE)sw.external_connection) 1 0 3 NJ 1480 NJ 1480 NJ
 preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.motorb,(SLAVE)motorb.external_connection) 1 0 3 NJ 160 NJ 160 NJ
-preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)hex_1.external_connection,(SLAVE)sopc_2.hex1) 1 0 3 NJ 1010 NJ 980 NJ
-preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.porta_b,(SLAVE)PORTA_B.external_connection) 1 0 4 NJ 660 NJ 660 NJ 670 NJ
-preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)motory.external_connection,(SLAVE)sopc_2.motory) 1 0 3 NJ 460 NJ 460 NJ
-preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)timer_geral.external_port,(SLAVE)sopc_2.to) 1 0 4 NJ 1160 NJ 1160 NJ 1160 NJ
-preplace netloc FAN_OUT<net_container>sopc_2</net_container>(SLAVE)spi.irq,(MASTER)cpu.irq,(SLAVE)botao.irq,(SLAVE)uart_rs232.interrupt,(SLAVE)jtag_uart.irq,(SLAVE)timestamp_timer.irq,(SLAVE)watchdog_timer.irq,(SLAVE)timer_geral.irq,(SLAVE)sys_clk_timer.irq,(SLAVE)PORTA_B.irq) 1 2 2 760 930 1040
-preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.spi,(SLAVE)spi.external) 1 0 4 NJ 910 NJ 910 NJ 910 NJ
-preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.botao,(SLAVE)botao.external_connection) 1 0 3 NJ 570 NJ 570 NJ
-preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)motora.external_connection,(SLAVE)sopc_2.motora) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.motory,(SLAVE)motory.external_connection) 1 0 3 NJ 460 NJ 460 NJ
+preplace netloc INTERCONNECT<net_container>sopc_2</net_container>(SLAVE)uart_rs232.reset,(SLAVE)hex_2.reset,(SLAVE)sw.reset,(SLAVE)hex_1.reset,(MASTER)clk.clk_reset,(SLAVE)sys_clk_timer.reset,(SLAVE)saida_C.reset,(SLAVE)cpu.reset,(MASTER)watchdog_timer.resetrequest,(SLAVE)botao.reset,(SLAVE)motorb.reset,(SLAVE)hex_4.reset,(SLAVE)motora.reset,(SLAVE)timestamp_timer.reset,(SLAVE)sysid.reset,(SLAVE)memoria.reset1,(SLAVE)entrada_C.reset,(SLAVE)adc_1.reset,(SLAVE)motory.reset,(MASTER)cpu.debug_reset_request,(SLAVE)hex_5.reset,(SLAVE)timer_geral.reset,(SLAVE)PORTA_B.reset,(SLAVE)spi.reset,(SLAVE)jtag_uart.reset,(SLAVE)watchdog_timer.reset,(SLAVE)PORTA_A.reset,(SLAVE)motorx.reset,(SLAVE)hex_0.reset,(SLAVE)hex_3.reset) 1 1 3 300 1770 740 1080 1020
+preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.hex0,(SLAVE)hex_0.external_connection) 1 0 3 NJ 260 NJ 260 NJ
+preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)timer_geral.external_port,(SLAVE)sopc_2.to) 1 0 4 NJ 1200 NJ 1200 NJ 1200 NJ
+preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)spi.external,(SLAVE)sopc_2.spi) 1 0 4 NJ 900 NJ 900 NJ 900 NJ
+preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.hex2,(SLAVE)hex_2.external_connection) 1 0 3 NJ 1120 NJ 1120 NJ
+preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.botao,(SLAVE)botao.external_connection) 1 0 3 NJ 560 NJ 560 NJ
 preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.hex_4,(SLAVE)hex_4.external_connection) 1 0 3 NJ 1750 NJ 1750 NJ
+preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.hex1,(SLAVE)hex_1.external_connection) 1 0 3 NJ 930 NJ 960 NJ
+preplace netloc FAN_OUT<net_container>sopc_2</net_container>(SLAVE)saida_C.clk,(SLAVE)hex_2.clk,(SLAVE)spi.clk,(SLAVE)memoria.clk1,(SLAVE)botao.clk,(SLAVE)hex_0.clk,(SLAVE)entrada_C.clk,(SLAVE)PORTA_B.clk,(SLAVE)sys_clk_timer.clk,(SLAVE)jtag_uart.clk,(MASTER)clk.clk,(SLAVE)hex_5.clk,(SLAVE)uart_rs232.clk,(SLAVE)hex_1.clk,(SLAVE)hex_4.clk,(SLAVE)hex_3.clk,(SLAVE)sysid.clk,(SLAVE)timestamp_timer.clk,(SLAVE)adc_1.clk,(SLAVE)PORTA_A.clk,(SLAVE)timer_geral.clk,(SLAVE)motory.clk,(SLAVE)cpu.clk,(SLAVE)watchdog_timer.clk,(SLAVE)sw.clk,(SLAVE)motorb.clk,(SLAVE)motora.clk,(SLAVE)motorx.clk) 1 1 3 280 1640 800 1040 1060
 preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.uart_1,(SLAVE)uart_rs232.external_interface) 1 0 3 NJ 640 NJ 640 NJ
-preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.reset,(SLAVE)clk.clk_in_reset) 1 0 1 NJ
 preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.porta_a,(SLAVE)PORTA_A.external_connection) 1 0 4 NJ 1420 NJ 1420 NJ 1420 NJ
-preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)hex_3.external_connection,(SLAVE)sopc_2.hex3) 1 0 3 NJ 1200 NJ 1200 NJ
-preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)clk.clk_in,(SLAVE)sopc_2.clk) 1 0 1 NJ
-preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)hex_0.external_connection,(SLAVE)sopc_2.hex0) 1 0 3 NJ 260 NJ 260 NJ
-preplace netloc FAN_OUT<net_container>sopc_2</net_container>(SLAVE)timer_geral.clk,(SLAVE)uart_rs232.clk,(SLAVE)hex_2.clk,(SLAVE)hex_5.clk,(MASTER)clk.clk,(SLAVE)motory.clk,(SLAVE)watchdog_timer.clk,(SLAVE)botao.clk,(SLAVE)memoria.clk1,(SLAVE)cpu.clk,(SLAVE)motorx.clk,(SLAVE)saida_C.clk,(SLAVE)sys_clk_timer.clk,(SLAVE)sw.clk,(SLAVE)adc_1.clk,(SLAVE)motora.clk,(SLAVE)PORTA_B.clk,(SLAVE)sysid.clk,(SLAVE)hex_3.clk,(SLAVE)hex_4.clk,(SLAVE)jtag_uart.clk,(SLAVE)hex_0.clk,(SLAVE)spi.clk,(SLAVE)entrada_C.clk,(SLAVE)timestamp_timer.clk,(SLAVE)hex_1.clk,(SLAVE)PORTA_A.clk,(SLAVE)motorb.clk) 1 1 3 280 880 780 1560 1060
+preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.motora,(SLAVE)motora.external_connection) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)hex_3.external_connection,(SLAVE)sopc_2.hex3) 1 0 3 NJ 1240 NJ 1240 NJ
+preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.clk,(SLAVE)clk.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>sopc_2</net_container>(SLAVE)timestamp_timer.irq,(SLAVE)watchdog_timer.irq,(SLAVE)spi.irq,(SLAVE)jtag_uart.irq,(SLAVE)timer_geral.irq,(SLAVE)botao.irq,(SLAVE)PORTA_B.irq,(MASTER)cpu.irq,(SLAVE)uart_rs232.interrupt,(SLAVE)sys_clk_timer.irq) 1 2 2 760 920 1080
+preplace netloc INTERCONNECT<net_container>sopc_2</net_container>(SLAVE)sysid.control_slave,(SLAVE)motora.s1,(MASTER)cpu.data_master,(SLAVE)botao.s1,(SLAVE)timer_geral.s1,(SLAVE)hex_3.s1,(SLAVE)hex_1.s1,(SLAVE)memoria.s1,(SLAVE)hex_5.s1,(SLAVE)cpu.debug_mem_slave,(SLAVE)sys_clk_timer.s1,(SLAVE)motory.s1,(SLAVE)watchdog_timer.s1,(SLAVE)hex_4.s1,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)PORTA_A.s1,(SLAVE)spi.spi_control_port,(SLAVE)hex_0.s1,(SLAVE)saida_C.s1,(SLAVE)motorb.s1,(SLAVE)uart_rs232.avalon_rs232_slave,(SLAVE)entrada_C.s1,(SLAVE)sw.s1,(MASTER)cpu.instruction_master,(SLAVE)adc_1.adc_slave,(SLAVE)PORTA_B.s1,(SLAVE)timestamp_timer.s1,(SLAVE)hex_2.s1,(SLAVE)motorx.s1) 1 1 3 320 680 720 1060 1000
+preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)PORTA_B.external_connection,(SLAVE)sopc_2.porta_b) 1 0 4 NJ 620 NJ 620 NJ 660 NJ
 preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.motorx,(SLAVE)motorx.external_connection) 1 0 3 NJ 360 NJ 360 NJ
 preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)saida_C.external_connection,(SLAVE)sopc_2.saida_c) 1 0 4 NJ 1440 NJ 1440 NJ 1440 NJ
-preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)hex_2.external_connection,(SLAVE)sopc_2.hex2) 1 0 3 NJ 1080 NJ 1080 NJ
+preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)clk.clk_in_reset,(SLAVE)sopc_2.reset) 1 0 1 NJ
 preplace netloc EXPORT<net_container>sopc_2</net_container>(SLAVE)sopc_2.entrada_c,(SLAVE)entrada_C.external_connection) 1 0 4 NJ 1620 NJ 1620 NJ 1620 NJ
 levelinfo -pg 1 0 70 1310
 levelinfo -hier sopc_2 80 110 460 830 1150 1300

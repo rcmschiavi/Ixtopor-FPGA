@@ -1,0 +1,18 @@
+19:07:50 **** Incremental Build of configuration Nios II for project Ixtopor-2 ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking Ixtopor-2.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=Ixtopor-2.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Ixtopor-2.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert Ixtopor-2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512482898 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (Ixtopor-2.elf) 28 KBytes program size (code + initialized data).
+Info:                 4272 Bytes free for stack + heap.
+Info: Creating Ixtopor-2.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Ixtopor-2.elf >Ixtopor-2.objdump
+[Ixtopor-2 build complete]
+
+19:07:52 Build Finished (took 1s.992ms)
+

@@ -1,0 +1,81 @@
+
+
+#include "sys/alt_stdio.h"
+#include "altera_up_avalon_rs232.h"
+#include "system.h"
+#include "unistd.h"
+#include <stdio.h>
+
+
+
+#define delay(atraso)	usleep(atraso*1000)
+
+alt_up_rs232_dev *rs232; // Variável que inicia o uart
+int distX=0,distY=0,angA=0,angB=0;
+int read_serial(alt_up_rs232_dev *rs232, int num_dados);
+void send_data(alt_u8 data, alt_up_rs232_dev *rs232);
+void mover(alt_up_rs232_dev *rs232);
+
+int main()
+{
+	rs232 = alt_up_rs232_open_dev("/dev/uart_rs232");
+	alt_u8 valor = 0x40;
+	printf("Programa iniciado!\n");
+	delay(100);
+	send_data(valor, rs232);
+	delay(100);
+	//printf("num-dados: %u\n",num_dados);
+	while(1){
+		//Captura o dado em um vetor
+		int caso = read_serial(rs232,1);
+		switch(caso)
+		{
+		case((int)'Z')://(int) converte o char para ascII
+			alt_printf("Zeramento iniciado\n");
+		break;
+		case((int)'G'):
+			alt_printf("Movimento iniciado\n");
+			//mover(rs232);
+		break;
+		case((int)'A'):
+			alt_printf("Aquecimento iniciado.\n");
+		break;
+		case((int)'F'):
+			alt_printf("Setando velocidade.\n");
+		break;
+		case(10):
+		break;
+		default:
+			alt_printf("Comando desconhecido\n");
+		}
+	}
+	return 0;
+}
+
+int read_serial(alt_up_rs232_dev *rs232, int num_dados){
+	alt_u8 *dado;
+	alt_u8 *parity_error;
+	while(1){
+		if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+			alt_u8 **teste = &dado;
+			int ok = **teste;
+			//alt_printf("teste: %x ok: %x\n", **teste, ok);
+			return ok;
+		}
+	}
+	return 0;
+}
+
+void send_data(alt_u8 data, alt_up_rs232_dev *rs232){
+
+	//Envia o dado e verifica se teve exito, não parece funcionar a verificalçao,
+	//mas o dado é enviado
+	if(!alt_up_rs232_write_data(rs232, data )){
+		  alt_printf("Dado enviado.\n");
+		}
+		else{
+		  alt_printf("Algo deu errado.\n");
+		}
+}
+
+

@@ -15,7 +15,7 @@
   </columns>
  </clocktable>
  <library
-   expandedCategories="Library/Interface Protocols,Library/University Program,Library,Project,Library/Interface Protocols/Serial,Library/University Program/Communications" />
- <window width="1366" height="728" x="0" y="0" />
+   expandedCategories="Library/Basic Functions/Bridges and Adaptors,Library/University Program,Library/Basic Functions/Simulation; Debug and Verification,Library/University Program/Memory,Library/Memory Interfaces and Controllers/Flash,Project,Library/Processors and Peripherals,Library/Qsys Interconnect/Memory-Mapped,Library/Memory Interfaces and Controllers,Library/Qsys Interconnect/Memory-Mapped Alpha,Library/Memory Interfaces and Controllers/Memory Interfaces with ALTMEMPHY,Library/Basic Functions/Simulation; Debug and Verification/Simulation,Library/Qsys Interconnect,Library/Basic Functions/On Chip Memory,Library/Basic Functions/Bridges and Adaptors/Memory Mapped,Library/Memory Interfaces and Controllers/SDRAM,Library,Library/Basic Functions,Library/Memory Interfaces and Controllers/Memory Interfaces with UniPHY,Library/Processors and Peripherals/Hard Processor Components" />
+ <window width="1360" height="728" x="0" y="0" />
  <generation synthesis="VHDL" block_symbol_file="1" path="_PROJECT_NAME_" />
 </preferences>

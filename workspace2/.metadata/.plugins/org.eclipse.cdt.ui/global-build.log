@@ -1,0 +1,758 @@
+00:46:26 **** Build of configuration Nios II for project imp_UART ****
+make mem_init_generate 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Post-processing to create mem_init/sopc_2_memoria.hex...
+elf2hex imp_UART.elf 0x00010000 0x0001c34f --width=32 --little-endian-mem --create-lanes=0 mem_init/sopc_2_memoria.hex
+Post-processing to create mem_init/hdl_sim/sopc_2_memoria.dat...
+elf2dat --infile=imp_UART.elf --outfile=mem_init/hdl_sim/sopc_2_memoria.dat \
+		--base=0x00010000 --end=0x0001c34f --width=32 \
+		--little-endian-mem --create-lanes=0 
+Post-processing to create mem_init/hdl_sim/sopc_2_memoria.sym...
+nios2-elf-nm -n imp_UART.elf > mem_init/hdl_sim/sopc_2_memoria.sym
+Post-processing to create mem_init/meminit.spd...
+Post-processing to create mem_init/meminit.qip...
+00:46:43 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+[imp_UART build complete]
+00:47:37 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:61:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+obj/default/hello_world.o: In function `main':
+C:\github\Ixtopor-FPGA\software\imp_UART/hello_world.c:40: undefined reference to `mover'
+collect2.exe: error: ld returned 1 exit status
+make: *** [imp_UART.elf] Error 1
+00:47:47 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:61:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+00:48:59 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+00:49:59 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+00:50:44 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:62:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+00:54:28 **** Clean-only build of configuration Nios II for project problem ****
+make clean 
+[problem clean complete]
+00:55:02 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:62:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10072 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+00:55:58 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:62:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10060 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+00:58:59 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10032 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+00:59:53 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10008 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:01:30 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                9996 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:02:18 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+[imp_UART build complete]
+01:04:29 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                9984 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:08:43 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:64:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                9968 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:10:08 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:66:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                9952 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:11:19 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:66:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10216 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:12:04 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+[imp_UART build complete]
+01:13:36 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:14:17 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10004 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:14:49 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                9992 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:15:17 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+[imp_UART build complete]
+01:15:47 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+[imp_UART build complete]
+01:16:41 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10000 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:17:10 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10012 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:18:21 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:64:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10008 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:20:38 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:102:1: error: expected declaration or statement at end of input
+ }
+ ^
+hello_world.c:102:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [obj/default/hello_world.o] Error 1
+01:21:06 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'dado' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10016 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:21:38 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'dado' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10044 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:22:12 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'dado' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10020 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:22:48 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'dado' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                9992 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:22:59 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'dado' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                9992 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:23:56 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'mover':
+hello_world.c:87:29: warning: variable 'angB' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+                             ^
+hello_world.c:87:22: warning: variable 'angA' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+                      ^
+hello_world.c:87:14: warning: variable 'distY' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+              ^
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'dado' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                9996 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:24:24 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'mover':
+hello_world.c:87:29: warning: variable 'angB' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+                             ^
+hello_world.c:87:22: warning: variable 'angA' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+                      ^
+hello_world.c:87:14: warning: variable 'distY' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+              ^
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'dado' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10012 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:25:03 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'mover':
+hello_world.c:87:29: warning: variable 'angB' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+                             ^
+hello_world.c:87:22: warning: variable 'angA' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+                      ^
+hello_world.c:87:14: warning: variable 'distY' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+              ^
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'dado' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                9984 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:25:22 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+[imp_UART build complete]
+01:26:06 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'mover':
+hello_world.c:87:29: warning: variable 'angB' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+                             ^
+hello_world.c:87:22: warning: variable 'angA' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+                      ^
+hello_world.c:87:14: warning: variable 'distY' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+              ^
+hello_world.c:87:6: warning: variable 'distX' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+      ^
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'dado' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10016 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:26:53 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+[imp_UART build complete]
+01:27:30 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'mover':
+hello_world.c:87:29: warning: variable 'angB' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+                             ^
+hello_world.c:87:22: warning: variable 'angA' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+                      ^
+hello_world.c:87:14: warning: variable 'distY' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+              ^
+hello_world.c:87:6: warning: variable 'distX' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+      ^
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'dado' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10048 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:27:55 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+[imp_UART build complete]
+01:29:36 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Ixtopor-2_bsp//HAL/inc -I../Ixtopor-2_bsp/ -I../Ixtopor-2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'mover':
+hello_world.c:87:29: warning: variable 'angB' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+                             ^
+hello_world.c:87:22: warning: variable 'angA' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+                      ^
+hello_world.c:87:14: warning: variable 'distY' set but not used [-Wunused-but-set-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+              ^
+hello_world.c:87:6: warning: unused variable 'distX' [-Wunused-variable]
+  int distX=0,distY=0,angA=0,angB=0;
+      ^
+hello_world.c: In function 'read_serial':
+hello_world.c:63:7: warning: 'dado' is used uninitialized in this function [-Wuninitialized]
+   if(!alt_up_rs232_read_data(rs232, dado, parity_error )){
+       ^
+hello_world.c:63:7: warning: 'parity_error' is used uninitialized in this function [-Wuninitialized]
+Info: Linking imp_UART.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=imp_UART.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o imp_UART.elf obj/default/hello_world.o obj/default/motor.o -lm -msys-lib=m
+nios2-elf-insert imp_UART.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 242 --sidp 0x21210 --timestamp 1512614213 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name sopc_2 --quartus_project_dir "C:/github/Ixtopor-FPGA" --jdi ../..//output_files/sistema_basico2.jdi --sopcinfo C:/github/Ixtopor-FPGA/software/Ixtopor-2_bsp/../../sopc_2.sopcinfo
+Info: (imp_UART.elf) 32 KBytes program size (code + initialized data).
+Info:                10032 Bytes free for stack + heap.
+Info: Creating imp_UART.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source imp_UART.elf >imp_UART.objdump
+[imp_UART build complete]
+01:29:55 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+[imp_UART build complete]
+05:28:34 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+[imp_UART build complete]
+05:32:20 **** Incremental Build of configuration Nios II for project imp_UART ****
+make all 
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
+[BSP build complete]
+[imp_UART build complete]
