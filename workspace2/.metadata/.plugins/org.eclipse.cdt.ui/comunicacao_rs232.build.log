@@ -1,0 +1,6 @@
+02:22:36 **** Clean-only build of configuration Nios II for project comunicacao_rs232 ****
+make clean 
+[comunicacao_rs232 clean complete]
+
+02:22:37 Build Finished (took 709ms)
+

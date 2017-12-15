@@ -1,9 +1,9 @@
-12:01:49 **** Incremental Build of configuration Nios II for project Ixtopor ****
+10:32:46 **** Incremental Build of configuration Nios II for project Ixtopor ****
 make all 
 Info: Building ../Ixtopor_bsp/
 C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor_bsp/
 [BSP build complete]
 [Ixtopor build complete]
 
-12:01:50 Build Finished (took 975ms)
+10:32:49 Build Finished (took 2s.238ms)
 

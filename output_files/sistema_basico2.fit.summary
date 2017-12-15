@@ -1,11 +1,11 @@
-Fitter Status : Successful - Thu Dec 07 00:43:57 2017
+Fitter Status : Successful - Thu Dec 14 11:11:25 2017
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : sistema_basico2
 Top-level Entity Name : sistema_basico2
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 6,187 / 49,760 ( 12 % )
+Total logic elements : 6,218 / 49,760 ( 12 % )
     Total combinational functions : 4,886 / 49,760 ( 10 % )
     Dedicated logic registers : 2,731 / 49,760 ( 5 % )
 Total registers : 2731

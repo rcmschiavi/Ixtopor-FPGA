@@ -55,8 +55,6 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_location_assignment PIN_Y6 -to rxd
-set_location_assignment PIN_Y5 -to txd
 set_location_assignment PIN_AB13 -to sclk
 set_location_assignment PIN_AA15 -to miso
 set_location_assignment PIN_W13 -to mosi
@@ -159,8 +157,20 @@ set_global_assignment -name SDC_FILE sistema_basico2.out.sdc
 set_global_assignment -name VHDL_FILE controle_fio.vhd
 set_global_assignment -name VHDL_FILE stepper_linear.vhd
 set_global_assignment -name VHDL_FILE stepper_angular.vhd
-set_location_assignment PIN_AA19 -to endmxp
-set_location_assignment PIN_AB19 -to endmxm
-set_location_assignment PIN_AB5 -to stepx
-set_location_assignment PIN_AB6 -to dirx
+set_location_assignment PIN_AB6 -to stepx
+set_location_assignment PIN_AB5 -to dirx
+set_location_assignment PIN_AB8 -to diry
+set_location_assignment PIN_AA11 -to motora[14]
+set_location_assignment PIN_AA19 -to motorb[14]
+set_location_assignment PIN_AB7 -to motorx[15]
+set_location_assignment PIN_Y10 -to motory[15]
+set_location_assignment PIN_AB17 -to motora[15]
+set_location_assignment PIN_AB20 -to motorb[15]
+set_location_assignment PIN_AA12 -to stepa
+set_location_assignment PIN_Y19 -to stepb
+set_location_assignment PIN_AB9 -to stepy
+set_location_assignment PIN_Y5 -to endmxm
+set_location_assignment PIN_Y6 -to endmxp
+set_location_assignment PIN_AA7 -to endmym
+set_location_assignment PIN_AA6 -to endmyp
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

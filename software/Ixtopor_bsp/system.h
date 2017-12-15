@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'sopc_2'
  * SOPC Builder design path: ../../sopc_2.sopcinfo
  *
- * Generated: Tue Dec 05 15:35:30 BRST 2017
+ * Generated: Tue Dec 12 10:24:22 BRST 2017
  */
 
 /*
@@ -516,8 +516,8 @@
 #define MEMORIA_READ_DURING_WRITE_MODE "DONT_CARE"
 #define MEMORIA_SINGLE_CLOCK_OP 0
 #define MEMORIA_SIZE_MULTIPLE 1
-#define MEMORIA_SIZE_VALUE 40000
-#define MEMORIA_SPAN 40000
+#define MEMORIA_SIZE_VALUE 50000
+#define MEMORIA_SPAN 50000
 #define MEMORIA_TYPE "altera_avalon_onchip_memory2"
 #define MEMORIA_WRITABLE 1
 
@@ -753,7 +753,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1512482898
+#define SYSID_TIMESTAMP 1512614213
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

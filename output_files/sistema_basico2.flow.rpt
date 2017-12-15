@@ -1,5 +1,5 @@
 Flow report for sistema_basico2
-Thu Dec 07 00:44:28 2017
+Thu Dec 14 11:11:52 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,14 +41,14 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Dec 07 00:44:28 2017       ;
+; Flow Status                        ; Successful - Thu Dec 14 11:11:52 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; sistema_basico2                             ;
 ; Top-level Entity Name              ; sistema_basico2                             ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 6,187 / 49,760 ( 12 % )                     ;
+; Total logic elements               ; 6,218 / 49,760 ( 12 % )                     ;
 ;     Total combinational functions  ; 4,886 / 49,760 ( 10 % )                     ;
 ;     Dedicated logic registers      ; 2,731 / 49,760 ( 5 % )                      ;
 ; Total registers                    ; 2731                                        ;
@@ -67,7 +67,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/07/2017 00:41:04 ;
+; Start date & time ; 12/14/2017 11:08:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; sistema_basico2     ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                    ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1097975843555.151261446422340                            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1097975843555.151325691804736                            ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                   ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                       ; --            ; --          ; --             ;
@@ -109,12 +109,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:38     ; 1.0                     ; 942 MB              ; 00:02:10                           ;
-; Fitter                    ; 00:01:10     ; 1.2                     ; 1457 MB             ; 00:01:33                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 630 MB              ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:14     ; 1.4                     ; 796 MB              ; 00:00:16                           ;
+; Analysis & Synthesis      ; 00:01:38     ; 1.0                     ; 951 MB              ; 00:02:08                           ;
+; Fitter                    ; 00:01:05     ; 1.2                     ; 1455 MB             ; 00:01:29                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 633 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:12     ; 1.5                     ; 797 MB              ; 00:00:16                           ;
 ; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 665 MB              ; 00:00:04                           ;
-; Total                     ; 00:03:12     ; --                      ; --                  ; 00:04:09                           ;
+; Total                     ; 00:03:04     ; --                      ; --                  ; 00:04:02                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

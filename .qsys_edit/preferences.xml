@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preferences>
  <debug showDebugMenu="0" />
- <systemtable>
+ <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="159" />
+   <connections preferredWidth="47" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
@@ -14,8 +14,7 @@
    <frequency preferredWidth="529" />
   </columns>
  </clocktable>
- <library
-   expandedCategories="Library/Basic Functions/Bridges and Adaptors,Library/University Program,Library/Basic Functions/Simulation; Debug and Verification,Library/University Program/Memory,Library/Memory Interfaces and Controllers/Flash,Project,Library/Processors and Peripherals,Library/Qsys Interconnect/Memory-Mapped,Library/Memory Interfaces and Controllers,Library/Qsys Interconnect/Memory-Mapped Alpha,Library/Memory Interfaces and Controllers/Memory Interfaces with ALTMEMPHY,Library/Basic Functions/Simulation; Debug and Verification/Simulation,Library/Qsys Interconnect,Library/Basic Functions/On Chip Memory,Library/Basic Functions/Bridges and Adaptors/Memory Mapped,Library/Memory Interfaces and Controllers/SDRAM,Library,Library/Basic Functions,Library/Memory Interfaces and Controllers/Memory Interfaces with UniPHY,Library/Processors and Peripherals/Hard Processor Components" />
+ <library expandedCategories="Project,Library" />
  <window width="1360" height="728" x="0" y="0" />
  <generation synthesis="VHDL" block_symbol_file="1" path="_PROJECT_NAME_" />
 </preferences>

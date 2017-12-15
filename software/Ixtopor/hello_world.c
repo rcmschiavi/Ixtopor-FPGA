@@ -22,7 +22,7 @@
 /*#include <sstream>
 #include <iostream>*/
 
-#define motorX MOTORX_BASE   // Define a porta saida_A como controle do acionamento dos displays
+#define motorX MOTORY_BASE   // Define a porta saida_A como controle do acionamento dos displays
 
 #define saida(porta, valor)	IOWR_ALTERA_AVALON_PIO_DATA(porta, valor)
 #define delay(atraso)	usleep(atraso*1000)
@@ -31,15 +31,15 @@ int main()
 {
 	//int val=17110;
 	//cout << hex << val << endl;
-	//saida(motorX,0x42D6); //Reseta e manda os paramentros para andar na velocidade 0110 e 180 em decimal
+	saida(motorX,0x8000); //Reseta e manda os paramentros para andar na velocidade 0110 e 180 em decimal
 	delay(100);
-	//saida(motorX,0x62D6);
-	alt_printf ("Ok");
-	IOWR_ALTERA_AVALON_UART_TXDATA(UART_BASE, "11010100");
-	while(1){
-		alt_printf(IORD_ALTERA_AVALON_UART_RXDATA(UART_BASE));
-		delay(100);
-	}
+	saida(motorX,0x8000);
+	alt_printf ("aaa");
+	//IOWR_ALTERA_AVALON_UART_TXDATA(UART_BASE, "11010100");
+	//while(1){
+		//alt_printf(IORD_ALTERA_AVALON_UART_RXDATA(UART_BASE));
+		//delay(100);
+	//}
 
 	return 0;
 }

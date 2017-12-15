@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'sopc_2'
  * SOPC Builder design path: ../../sopc_2.sopcinfo
  *
- * Generated: Mon Dec 04 21:52:24 BRST 2017
+ * Generated: Tue Dec 12 10:24:22 BRST 2017
  */
 
 /*
@@ -66,7 +66,7 @@
  */
 
 #define MEMORIA_REGION_BASE 0x10020
-#define MEMORIA_REGION_SPAN 39968
+#define MEMORIA_REGION_SPAN 49968
 #define RESET_REGION_BASE 0x10000
 #define RESET_REGION_SPAN 32
 

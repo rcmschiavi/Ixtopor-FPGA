@@ -22,32 +22,24 @@
 #include <iostream>*/
 
 #define motorX MOTORX_BASE   // Define a porta saida_A como controle do acionamento dos displays
-
+#define motorY MOTORY_BASE
+#define motorA MOTORB_BASE
+#define sigBusy ENTRADA_C_BASE
 #define saida(porta, valor)	IOWR_ALTERA_AVALON_PIO_DATA(porta, valor)
+#define leitura(porta) IORD_ALTERA_AVALON_PIO_DATA(porta)
 #define delay(atraso)	usleep(atraso*1000)
 
 int main()
 {
-	//int val=17110;
-	//cout << hex << val << endl;
-	//saida(motorX,0x42D6); //Reseta e manda os paramentros para andar na velocidade 0110 e 180 em decimal
+
+	saida(motorX,0x5FF4); //Reseta e manda os paramentros para andar na velocidade 0110 e 180 em decimal
+	saida(motorY,0x5FF4);
+	saida(motorA,0x6033);
 	delay(100);
-	//saida(motorX,0x62D6);
-	char i =10;
-	alt_printf ("Ok %x", i);
+	saida(motorX,0x7FF4);//Envia os parãmetros com o reset desativado
+	saida(motorY,0x7FF4);
+	saida(motorA,0x4033);
+	alt_printf ("Motor X em movimento.");
 
 	return 0;
 }
-/*
-std::string controla_motor(int velocidade,int distancia, int dir){
-	distancia=distancia*16;
-	int rst=8192;
-	dir=dir*16384;
-	int total = velocidade+dir+rst;
-    std::stringstream t;
-    t<<std::hex<<total;
-    std::string str="0x";
-    str.append(t.str());
-    cout<<str;
-    return str;
-}*/

@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
 newApplicationWizardPage.defaultLocation=C\:\\github\\Ixtopor-FPGA\\software\\imple_UART
-newSoftwareExampleWizardPage.defaultLocation=C\:\\github\\Ixtopor-FPGA\\software\\problem
+newSoftwareExampleWizardPage.defaultLocation=C\:\\github\\Ixtopor-FPGA\\software\\comunicacao_rs232
 newSoftwareExampleWizardPage.sopcinfoFile=C\:\\github\\Ixtopor-FPGA\\sopc_2.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\github\\Ixtopor-FPGA\\software\\problem_bsp
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\github\\Ixtopor-FPGA\\software\\comunicacao_rs232_bsp

@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu' in SOPC Builder design 'sopc_2'
 # SOPC Builder design path: ../../sopc_2.sopcinfo
 #
-# Generated: Mon Dec 04 21:52:24 BRST 2017
+# Generated: Tue Dec 12 10:24:22 BRST 2017
 
 # DO NOT MODIFY THIS FILE
 #
@@ -47,4 +47,4 @@
 # by allowing GDB to cache memory contents on the host.
 
 # memoria
-memory 0x10000 0x19c40 cache
+memory 0x10000 0x1c350 cache

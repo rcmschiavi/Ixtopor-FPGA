@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>06/12/2017 17:52:06</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1512589926976</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>12/12/2017 10:54:50</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1513083290849</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\github\Ixtopor-FPGA\software\Ixtopor_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\sopc_2.sopcinfo</SopcDesignFile>
@@ -906,8 +906,8 @@
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>memoria</slaveDescriptor>
-                <addressRange>0x00010000 - 0x00019C3F</addressRange>
-                <addressSpan>40000</addressSpan>
+                <addressRange>0x00010000 - 0x0001C34F</addressRange>
+                <addressSpan>50000</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
