@@ -1,9 +1,0 @@
-16:23:15 **** Incremental Build of configuration Nios II for project erro ****
-make all 
-Info: Building ../Ixtopor_bsp/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor_bsp/
-[BSP build complete]
-[erro build complete]
-
-16:23:16 Build Finished (took 904ms)
-

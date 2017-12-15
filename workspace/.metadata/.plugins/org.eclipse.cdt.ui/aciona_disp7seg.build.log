@@ -1,9 +1,0 @@
-12:53:53 **** Incremental Build of configuration Nios II for project aciona_disp7seg ****
-make all 
-Info: Building ../_bspGeral/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../_bspGeral/
-[BSP build complete]
-[aciona_disp7seg build complete]
-
-12:53:53 Build Finished (took 840ms)
-

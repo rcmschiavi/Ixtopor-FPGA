@@ -1,31 +1,15 @@
-10:31:23 **** Build of configuration Nios II for project Ixtopor ****
+02:23:52 **** Build of configuration Nios II for project leitura_adc ****
 make mem_init_generate 
-Info: Building ../Ixtopor_bsp/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor_bsp/
+Info: Building ../Ixtopor-2_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor-2_bsp/
 [BSP build complete]
-Post-processing to create mem_init/sopc_2_memoria.hex...
-elf2hex Ixtopor.elf 0x00010000 0x0001c34f --width=32 --little-endian-mem --create-lanes=0 mem_init/sopc_2_memoria.hex
-Post-processing to create mem_init/hdl_sim/sopc_2_memoria.dat...
-elf2dat --infile=Ixtopor.elf --outfile=mem_init/hdl_sim/sopc_2_memoria.dat \
-		--base=0x00010000 --end=0x0001c34f --width=32 \
-		--little-endian-mem --create-lanes=0 
-Post-processing to create mem_init/hdl_sim/sopc_2_memoria.sym...
-nios2-elf-nm -n Ixtopor.elf > mem_init/hdl_sim/sopc_2_memoria.sym
-10:31:31 **** Incremental Build of configuration Nios II for project Ixtopor ****
-make all 
-Info: Building ../Ixtopor_bsp/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor_bsp/
-[BSP build complete]
-[Ixtopor build complete]
-10:32:04 **** Incremental Build of configuration Nios II for project Ixtopor ****
-make all 
-Info: Building ../Ixtopor_bsp/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor_bsp/
-[BSP build complete]
-[Ixtopor build complete]
-10:32:46 **** Incremental Build of configuration Nios II for project Ixtopor ****
-make all 
-Info: Building ../Ixtopor_bsp/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Ixtopor_bsp/
-[BSP build complete]
-[Ixtopor build complete]
+Info: Linking leitura_adc.elf
+nios2-elf-g++  -T'../Ixtopor-2_bsp//linker.x' -msys-crt0='../Ixtopor-2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Ixtopor-2_bsp/   -Wl,-Map=leitura_adc.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o leitura_adc.elf obj/default/hello_world.o -lm -msys-lib=m
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: leitura_adc.elf section `.text' will not fit in region `memoria'
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: address 0x21ec4 of leitura_adc.elf section `.rwdata' is not within region `memoria'
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: address 0x23b78 of leitura_adc.elf section `.bss' is not within region `memoria'
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: address 0x21ec4 of leitura_adc.elf section `.rwdata' is not within region `memoria'
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: address 0x23b78 of leitura_adc.elf section `.bss' is not within region `memoria'
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: region `memoria' overflowed by 30760 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [leitura_adc.elf] Error 1

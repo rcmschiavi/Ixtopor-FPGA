@@ -1,9 +1,0 @@
-21:07:41 **** Incremental Build of configuration Nios II for project teste_2_sysclock ****
-make all 
-Info: Building ../_bspGeral/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../_bspGeral/
-[BSP build complete]
-[teste_2_sysclock build complete]
-
-21:07:42 Build Finished (took 786ms)
-

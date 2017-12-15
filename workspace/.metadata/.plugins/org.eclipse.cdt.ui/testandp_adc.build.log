@@ -1,9 +1,0 @@
-23:15:48 **** Build of configuration Nios II for project testandp_adc ****
-make all 
-Info: Building ../_bspGeral/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../_bspGeral/
-[BSP build complete]
-[testandp_adc build complete]
-
-23:15:49 Build Finished (took 898ms)
-
